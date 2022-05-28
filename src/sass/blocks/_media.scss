@@ -1,0 +1,354 @@
+@media (max-width: 1439px) {
+    .sidepanel {
+        display: none;
+    }
+    .about {
+        padding: 100px 20px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .container {
+        max-width: 960px;
+    }
+    .about {
+        padding: 100px 0;
+        &__wrapper {
+            grid-template-columns: 400px 520px;
+            column-gap: 40px;
+        }
+        &__skills {
+            grid-template: repeat(2, minmax(115px, auto)) / repeat(2,250px);
+            column-gap: 20px;
+        }
+        &__skill {
+            grid-template-columns: 40px 195px;
+            column-gap: 15px;
+        }
+    }
+    .resume {
+        padding-bottom: 100px;
+        &__wrapper {
+            padding: 0 15px;
+            column-gap: 80px;
+        }
+    }
+    .skills {
+        &__wrapper {
+            grid-template-columns: repeat(auto-fit, 270px);
+            justify-content: space-around;
+        }
+        &__ratings {
+            justify-content: center;
+            grid-template: repeat(3,minmax(70px,auto))/repeat(2,350px);
+        }
+    }
+    .portfolio {
+        &__wrapper {
+            grid-template-columns: repeat(auto-fit, 280px);
+            grid-auto-rows: 280px;
+            justify-content: space-around;
+            row-gap: 35px;
+            .vertical, .horizonal {
+                grid-row: unset;
+                grid-column: unset;
+            }
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .container {
+        max-width: 720px;
+    }
+    .title {
+        &_fz36 {
+            font-size: 30px;
+        }
+    }
+    .about {
+        &__wrapper {
+            grid-template-columns: 300px 380px;
+        }
+        &__skills {
+            grid-template-columns: 380px;
+            grid-auto-rows: minmax(115px, auto);
+        }
+        &__skill {
+            grid-template-columns: 40px 320px;
+            column-gap: 20px;
+        }
+    }
+    .resume {
+        padding-bottom: 90px;
+        &__wrapper {
+            column-gap: 60px;
+            grid-template-columns: repeat(2,315px);
+        }
+        &__item {
+            &:before {
+                width: 30px;
+            }
+            &-heard {
+                padding: 45px 0 0 88px;
+            }
+            &-icon {
+                left: 30px;
+            } 
+        }          
+    } 
+    .skills {
+        &__ratings {
+            margin-top: 100px;
+            grid-template: repeat(3,minmax(70px,auto))/repeat(2,330px);
+            &-line {
+                width: 330px;
+            }
+        }
+    }
+    .portfolio {
+        padding-top: 90px;
+    }
+    .price {
+        &__items {
+            grid-template-columns: repeat(auto-fit, 350px);
+            padding: 65px 0 0 0;
+        }
+    }
+    .contacts {
+        padding: 60px 0;
+        &__wrapper {
+        padding: 0;
+        grid-template-columns: 330px 370px;
+        gap: 20px;
+        }
+        &__form {
+            grid-template: 45px 84px 45px/repeat(2,180px);
+            row-gap: 24px;
+        }
+        &__input{
+            input {
+                width: 145px;
+                padding: 0px 15px;
+                height: 93%;
+            }
+        }
+        &__textarea {
+            textarea {
+            width: 94%;
+            height: 75%;
+            }
+        }
+        .btn {
+            padding: 7px 25px;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        max-width: 540px;
+    }
+    .title {
+        &_fz48 {
+            font-size: 28px;
+        }
+    }
+    .promo {
+        &__title {
+            width: 300px;
+            line-height: 39px;
+        }
+    }
+    .about {
+        padding: 70px 0;
+        &__wrapper {
+            grid-template: 400px auto auto / 1fr;
+        }
+        &__photo {
+            grid-row: unset;
+        }
+        &__skills {
+            grid-template-columns: repeat(2, 260px);
+        }
+        &__skill {
+            grid-template-columns: 40px 200px;
+            column-gap: 20px;
+        }
+    }
+    .resume {
+        padding: 0 35px 70px 35px;
+        &__wrapper {
+            grid-template-columns: 470px;
+            row-gap: 50px;
+        }
+    }
+    .skills {
+        &__wrapper {
+            grid-template: repeat(4, minmax(270px, auto)) / repeat(2, 270px);
+            justify-content: center;
+        }
+        &__ratings {
+            margin-top: 60px;
+            grid-template: repeat(6,minmax(70px,auto))/repeat(1,330px);
+            &-line {
+                width: 330px;
+            }
+        }
+    }
+    .portfolio {
+        padding-top: 70px;
+        &__wrapper {
+            row-gap: 20px;
+        }
+    }
+    .price {
+        &__items {
+            padding-top: 70px;
+            justify-content: center;
+        }
+    }
+    .contacts {
+        padding: 70px 0 45px 0;
+        &__wrapper {
+            grid-template-columns: 320px;
+            justify-content: center;
+        }
+        &__photo {
+            display: none;
+        }      
+        &__descr {
+            width: 300px;
+        }
+        &__form {
+            grid-template-columns: 300px;
+            grid-template-rows: 45px 45px 143px;
+        }
+        &__input {
+            grid-column: 1/2;
+            input {
+                width: 255px;
+                height: 41px;
+            }
+        }
+        &__textarea {
+            grid-column: 1/2;
+            height: 100%;
+            textarea {
+                width: 278px;
+                height: 121px;
+            }
+        }  
+        &__triggers {
+            grid-column: 1/2;
+            grid-template-columns: repeat(1,auto);
+            justify-content: center;
+        }
+        &__policy {
+            grid-row: 1 / 2;
+            padding: 0 20px 20px 20px;
+            width: 180px;
+        }
+        &__btn{
+            grid-row: 2 / 3;
+            width: 219px;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        max-width: 100%;
+        padding: 0 8px;
+    }
+    .title {
+        &_fz48 {
+            font-size: 26px;
+        }
+    }
+    .hamburger {
+        right: 20px;
+    }
+    .promo {
+        background: url('../img/Background.jpg') no-repeat 60%/cover;
+        &__btn {
+            margin-top: 30px;
+        }
+    }
+    .menu {
+        &__block {
+            width: 250px;
+            padding-left: 20px;
+        }
+    }
+    .title {
+        &_fz36 {
+            font-size: 24px;
+            line-height: 36px;
+            margin-top: 26px;
+        }
+        &__section-subtitle {
+            margin-top: 20px;
+            margin-bottom: 15px;
+            margin-right: auto;
+            margin-left: auto;
+            width: 209px;
+        }
+    }
+    .about {
+        padding: 40px 0 50px 0;
+        &__wrapper {
+            grid-template: 340px auto auto / 1fr;
+        }
+        &__skills {
+            grid-template-columns: 1fr;
+        }
+        &__skill {
+            grid-template-columns: 40px 225px;
+        }
+    }
+    .resume {
+        padding: 0;
+        &__wrapper {
+            grid-template-columns: 300px;
+            row-gap: 40px;
+            margin-top: 37px;
+            padding: 0px 8px 40px 8px;
+        }
+
+    }
+    .skills {
+        &__wrapper {
+            grid-template: repeat(7, minmax(270px, auto)) / repeat(1, 270px);
+            gap: 20px;
+        }
+        &__ratings {
+            row-gap: 40px;
+            margin-top: 45px;
+            grid-template: repeat(6,minmax(70px,auto))/repeat(1,300px);
+            &-line {
+                width: 300px;
+            }
+        }
+    }
+    .portfolio {
+        padding-top: 40px;
+        &__wrapper {
+            margin-top: 55px;
+        }
+    }
+    .price {
+        &__items {
+            grid-template-columns: repeat(auto-fit, 290px);
+            justify-content: start;
+        }
+    }
+    .contacts {
+        padding: 45px 0 35px 0;
+        &__wrapper {
+            padding: 0 3px;
+            grid-template-columns: 314px;
+            justify-content: start;
+        }
+    }
+}
