@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "homepage": "https://kate2111.github.io/Project4_Portfolio",
+  "homepage": "###",
   "scripts": {
     "deploy": "gh-pages -d dist"
   },
