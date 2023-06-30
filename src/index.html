@@ -23,7 +23,7 @@
     <meta property="twitter:url" content="https://metatags.io/">
     <meta property="twitter:title" content="Мое портфолио">
     <meta property="twitter:description" content="Здесь вы можете ознакомится с моим портфолио и узнать больше обо мне">
-    <meta property="twitter:image" content="img/portfolio/mac.jpg"">
+    <meta property="twitter:image" content="img/portfolio/mac.jpg">
 
     <!-- Favicon -->
     <link rel="icon" href="icons/favicon.ico" type="image/x-icon">
@@ -45,14 +45,14 @@
     <meta name="msapplication-TileImage" content="icons/favicon/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
 
-    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="css/style.css">
 
 </head>
 <body>
     <aside class="sidepanel">
-        <a href="#" class="sidepanel__link"><img src="icons/aside/Facebook.svg" alt="Facebook"></a>
-        <a href="#" class="sidepanel__link"><img src="icons/aside/Github.svg" alt="Github"></a>
-        <a href="#" class="sidepanel__link"><img src="icons/aside/Instagram (1).svg" alt="Instagram"></a>
+        <a class="sidepanel__link" href="https://t.me/Noskova_Ekaterina"><img src="icons/aside/Telegram.svg" alt="Telegram"></a>
+        <a class="sidepanel__link" href="https://github.com/Kate2111"><img src="icons/aside/Github.svg" alt="Github"></a>
+        <a class="sidepanel__link" href="https://instagram.com/noskova_katy"><img src="icons/aside/Instagram (1).svg" alt="Instagram"></a>
         <div class="sidepanel__divider"></div>
         <div class="sidepanel__text"><span>Социальные сети</span></div>
     </aside>
@@ -99,6 +99,8 @@
         <div class="menu__overlay"></div>
     </div>
 
+    <canvas class="promo__animation"></canvas>
+
     <section class="promo">
         <div class="hamburger">
             <span></span>
@@ -106,61 +108,12 @@
             <span></span>
         </div>
         <div class="container">
-            <div class="title title_fz16 promo__subtitle">Меня зовут Александра Смит</div>
+            <div class="title title_fz16 promo__subtitle">Меня зовут Носкова Екатерина</div>
             <h1 class="title title_fz48 promo__title">Я web-разработчик из города Москва</h1>
             <div class="promo__buttons">
-                <a href="#" class="promo__link btn">Портфолио</a>
-                <a href="#" class="promo__link">Про меня</a>
-            </div>
-        </div>
-    </section>
-
-        <section class="about">
-        <div class="container">
-            <div class="about__wrapper">
-                <div class="about__photo">
-                    <img srcset="img/Photo-min.jpg 300w,
-                                img/Photo.jpg 400w"
-                        sizes="(max-width: 576px) 280px,
-                                (mix-width: 577px) 400px"    
-                    src="img/Photo.jpg" alt="photo">
-                    <!-- <picture>
-                        <source media="(max-width: 576px)" srcset="img/Photo-min.jpg">
-                        <source media="(mix-width: 577px)" srcset="img/Photo.jpg">
-                        <img src="img/Photo.jpg" alt="photo">
-                    </picture> -->
-                </div>
-                <div class="about__descr">
-                    <h2 class="title title_fz16 about__title">Про меня</h2>
-                    <div class="title title_fz36 about__subtitle">Меня зовут Александра</div>
-                    <div class="divider"></div>
-                    <p class="about__text">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi adipisci nisi ullam quibusdam aliquam. Tempora, aperiam ipsam! Nobis accusamus reprehenderit sint rerum commodi necessitatibus, exercitationem doloribus voluptatibus illum minus ipsam.
-                    </p>
-                </div>
-                <div class="about__skills">
-                    <div class="about__skill">
-                        <div class="about__skill-circle"><img src="icons/about/web development.svg" alt="web-dev"></div>
-                        <div>
-                            <div class="title  title_fz14">Web-разработка</div>
-                            <div class="about__skill-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa sed iusto quis deserunt asperiores adipisci eligendi, cumque distinctio libero ducimus voluptatem vel aliquid quia doloribus assumenda dolorum quam vitae veniam?</div>
-                        </div>
-                    </div>
-                    <div class="about__skill">
-                        <div class="about__skill-circle"><img src="icons/about/Design.svg" alt="Design"></div>
-                        <div>
-                            <div class="title  title_fz14">Разработка приложений</div>
-                            <div class="about__skill-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa sed iusto quis deserunt asperiores adipisci eligendi, cumque distinctio libero ducimus voluptatem vel aliquid quia doloribus assumenda dolorum quam vitae veniam?</div>
-                        </div>
-                    </div>
-                    <div class="about__skill">
-                        <div class="about__skill-circle"><img src="icons/about/Mobile dev.svg" alt="Mobile-dev"></div>
-                        <div>
-                            <div class="title  title_fz14">UI/UX Design</div>
-                            <div class="about__skill-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa sed iusto quis deserunt asperiores adipisci eligendi, cumque distinctio libero ducimus voluptatem vel aliquid quia doloribus assumenda dolorum quam vitae veniam?</div>
-                        </div>
-                    </div>
-                </div>
+                <a href="#portfolio" class="promo__link my_button my_button--active">Портфолио</a>
+                <a href="#about" class="promo__link my_button">Про меня</a>
+                <a href="#about" class="promo__link my_button">Скачать  CV</a>
             </div>
         </div>
     </section>
@@ -245,44 +198,6 @@
             <div class="title title_fz36 title__section-subtitle">Что я использую в работе</div>
             <div class="divider"></div>
 
-            <div class="skills__wrapper">
-                <div class="skills__item">
-                    <div class="skills__item-icon"><img src="icons/skills/html5.png" alt="html5"></div>
-                    <div class="title title_fz14 skills__item-title">HTML5</div>
-                    <div class="skills__item-text">Именно он создает каркас вашего сайта или приложения, а пятая версия позволит мне создавать более SEO-оптимизированную структуру вашего продукта</div>
-                </div>
-                <div class="skills__item">
-                    <div class="skills_itemr-icon"><img src="icons/skills/css3.png" alt="css3"></div>
-                    <div class="title title_fz14 skills__item-title">CSS3</div>
-                    <div class="skills__item-text">Этот язык стилей позволяет мне создавать абсолютно любой внешний вид вашего сайта или приложения. Все ограничивается только вашей фантазией!</div>
-                </div>
-                <div class="skills__item">
-                    <div class="skills__item-icon"><img src="icons/skills/Group.png" alt="Group"></div>
-                    <div class="title title_fz14 skills__item-title">Java Script</div>
-                    <div class="skills__item-text">Этот язык программирования позволяет оживить все что угодно: слайдеры, окна, подсказки, вкладки, получение данных от сервера и многое другое</div>
-                </div>
-                <div class="skills__item">
-                    <div class="skills__item-icon"><img src="icons/skills/Jquery.png" alt="Jquery"></div>
-                    <div class="title title_fz14 skills__item-title">Jquery</div>
-                    <div class="skills__item-text">Библиотека Jquery позволит ускорить разработку. Без необходимости интегрировать в проект мы её не будем, но навык работы с ней присутствует</div>
-                </div>
-                <div class="skills__item">
-                    <div class="skills__item-icon"><img src="icons/skills/React.png" alt="React"></div>
-                    <div class="title title_fz14 skills__item-title">React</div>
-                    <div class="skills__item-text">Эта библиотека позволяет создавать web-приложения. Мы можем создать максимально интерактивный продукт именно под ваши цели</div>
-                </div>
-                <div class="skills__item">
-                    <div class="skills__item-icon"><img src="icons/skills/Node.js.png" alt="Node.js"></div>
-                    <div class="title title_fz14 skills__item-title">Node.js</div>
-                    <div class="skills__item-text">Эта платформа позволяет создавать бэкенд для вашего продукта - “мозги”, которые будут выполнять действия, которые пользователь не видит</div>
-                </div>
-                <div class="skills__item">
-                    <div class="skills__item-icon"><img src="icons/skills/Mongo.db.png" alt="Mongo.db"></div>
-                    <div class="title title_fz14 skills__item-title">Mongo.db</div>
-                    <div class="skills__item-text">Это нереляционная база данных, которая будет хранить данные вашего сайта или приложения</div>
-                </div>
-            </div>
-
             <div class="skills__ratings">
                 <div class="skills__ratings-item">
                     <div class="title title_fz14 skills__ratings-title">Создание сайтов</div>
@@ -330,70 +245,86 @@
         </div>
     </section> 
 
-    <section class="portfolio">
+    <section id="portfolio" class="portfolio">
         <div class="container">
             <h2 class="title title_fz16 title__section-title">Портфолио</h2>
-            <div class="title title_fz36 title__section-subtitle">Мои работы</div>
+            <div class="portfolio__tabs">
+                <button class="my_button portfolio__tab my_button--active">
+                  All
+                </button>
+                <button class="my_button portfolio__tab ">
+                  React
+                </button>
+                <button class="my_button portfolio__tab">
+                  JS
+                </button>
+            </div>
             <div class="divider"></div>
 
-            <div class="portfolio__wrapper">
-                <a href="#" class="portfolio__item">
-                    <img src="img/portfolio/uber.jpg" alt="uber">
-                </a>
-                <a href="#" class="portfolio__item">
-                    <img src="img/portfolio/pulse.jpg" alt="pulse">
-                </a>
-                <a href="#" class="portfolio__item">
-                    <img src="img/portfolio/bread.jpg" alt="bread">
-                </a>
-                <a href="#" class="portfolio__item vertical">
-                    <img src="img/portfolio/plans.jpg" alt="plans">
-                </a>
-                <a href="#" class="portfolio__item">
-                    <img src="img/portfolio/ipad.jpg" alt="ipad">
-                </a>
-                <a href="#" class="portfolio__item horizonal">
-                    <img src="img/portfolio/mac.jpg" alt="mac">
-                </a>
+            <div class="portfolio__wrapper-items">
+                <div class="portfolio__items portfolio__items--active">
+                    <img data-modal class="portfolio__item" src="img/portfolio/uber.jpg" alt="uber">
+                    <img data-modal class="portfolio__item" src="img/portfolio/pulse.jpg" alt="pulse">
+                    <img data-modal class="portfolio__item" src="img/portfolio/bread.jpg" alt="bread">
+                    <img data-modal class="portfolio__item vertical" src="img/portfolio/plans.jpg" alt="plans">
+                    <img data-modal class="portfolio__item" src="img/portfolio/ipad.jpg" alt="ipad">
+                    <img data-modal class="portfolio__item horizonal" src="img/portfolio/mac.jpg" alt="mac">
+                </div>
+                <div class="portfolio__items">
+                    <img data-modal class="portfolio__item" src="img/portfolio/uber.jpg" alt="uber">
+                    <img data-modal class="portfolio__item" src="img/portfolio/pulse.jpg" alt="pulse">
+                    <img data-modal class="portfolio__item" src="img/portfolio/bread.jpg" alt="bread">
+                </div>
+                <div class="portfolio__items">
+                    <img data-modal class="portfolio__item" src="img/portfolio/bread.jpg" alt="bread">
+                    <img data-modal class="portfolio__item" src="img/portfolio/plans.jpg" alt="plans">
+                    <img data-modal class="portfolio__item" src="img/portfolio/ipad.jpg" alt="ipad">
+                    <img data-modal class="portfolio__item" src="img/portfolio/mac.jpg" alt="mac">
+                </div>
             </div>
         </div>
     </section>
 
-    <section class="price">
+    <section id="about" class="about">
         <div class="container">
-            <h2 class="title title_fz16 title__section-title">Прайс-лист</h2>
-            <div class="divider price__divider"></div>
-
-            <div class="price__items">
-                <div class="price__item">
-                    <div class="price__item-name">Landing-page</div>
-                    <div class="price__item-price">от 8000 руб.</div>
-                    <div class="price__item-descr">Одностраничный сайт для презентации услуг/товаров/...</div>
+            <div class="about__wrapper">
+                <div class="about__descr">
+                    <h2 class="title title_fz16 title__section-title">Про меня</h2>
+                    <div class="title title_fz36 title__section-subtitle">Меня зовут Екатерина</div>
+                    <div class="divider"></div>
+                    <p class="about__text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi adipisci nisi ullam quibusdam aliquam. Tempora, aperiam ipsam! Nobis accusamus reprehenderit sint rerum commodi necessitatibus, exercitationem doloribus voluptatibus illum minus ipsam.
+                    </p>
                 </div>
-                <div class="price__item">
-                    <div class="price__item-name">Корпоративный сайт</div>
-                    <div class="price__item-price">от 20000 руб.</div>
-                    <div class="price__item-descr">Сайт для вашего бизнеса или компании</div>
-                </div>
-                <div class="price__item">
-                    <div class="price__item-name">Интернет-магазин</div>
-                    <div class="price__item-price">от 30000 руб.</div>
-                    <div class="price__item-descr">Инструмент для ваших продаж в сети</div>
-                </div>
-                <div class="price__item">
-                    <div class="price__item-name">Web-приложение</div>
-                    <div class="price__item-price">от 28000 руб.</div>
-                    <div class="price__item-descr">Приложение внутри браузера для лучшего комфорта</div>
-                </div>
-                <div class="price__item">
-                    <div class="price__item-name">Android/IOS Приложение</div>
-                    <div class="price__item-price">от 25000 руб.</div>
-                    <div class="price__item-descr">Приложение для смартфона любой ОС</div>
-                </div>
-                <div class="price__item">
-                    <div class="price__item-name">Дизайн</div>
-                    <div class="price__item-price">Индивидуально</div>
-                    <div class="price__item-descr">Создам дизайн для вашего сайта/приложения...</div>
+                <div class="about__skills">
+                    <div class="about__skill">
+                        <div class="about__skill-circle"><img src="icons/about/web development.svg" alt="web-dev"></div>
+                        <div>
+                            <div class="title  title_fz14">Web-разработка</div>
+                            <div class="about__skill-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa sed iusto quis deserunt asperiores adipisci eligendi, cumque distinctio libero ducimus voluptatem vel aliquid quia doloribus assumenda dolorum quam vitae veniam?</div>
+                        </div>
+                    </div>
+                    <div class="about__skill">
+                        <div class="about__skill-circle"><img src="icons/about/Design.svg" alt="Design"></div>
+                        <div>
+                            <div class="title  title_fz14">Разработка приложений</div>
+                            <div class="about__skill-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa sed iusto quis deserunt asperiores adipisci eligendi, cumque distinctio libero ducimus voluptatem vel aliquid quia doloribus assumenda dolorum quam vitae veniam?</div>
+                        </div>
+                    </div>
+                    <div class="about__skill">
+                        <div class="about__skill-circle"><img src="icons/about/Mobile dev.svg" alt="Mobile-dev"></div>
+                        <div>
+                            <div class="title  title_fz14">UI/UX Design</div>
+                            <div class="about__skill-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa sed iusto quis deserunt asperiores adipisci eligendi, cumque distinctio libero ducimus voluptatem vel aliquid quia doloribus assumenda dolorum quam vitae veniam?</div>
+                        </div>
+                    </div>
+                    <div class="about__skill">
+                        <div class="about__skill-circle"><img src="icons/about/Mobile dev.svg" alt="Mobile-dev"></div>
+                        <div>
+                            <div class="title  title_fz14">UI/UX Design</div>
+                            <div class="about__skill-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa sed iusto quis deserunt asperiores adipisci eligendi, cumque distinctio libero ducimus voluptatem vel aliquid quia doloribus assumenda dolorum quam vitae veniam?</div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -412,13 +343,13 @@
 
                     <div class="title title_fz14 contacts__text">Любым удобным для вас способом:</div>
                     <div class="contacts__social">
-                        <a href="#" class="contacts__link">
-                            <img src="icons/social/Facebook.svg" alt="Facebook">
+                        <a class="contacts__link" href="https://github.com/Kate2111" >
+                            <img src="icons/social/Facebook.svg" alt="GitHub">
                         </a>
-                        <a href="#" class="contacts__link">
+                        <a class="contacts__link" href="https://t.me/Noskova_Ekaterina" >
                             <img src="icons/social/Telegram.svg" alt="Telegram">
                         </a>
-                        <a href="#" class="contacts__link">
+                        <a class="contacts__link" href="https://instagram.com/noskova_katy">
                             <img src="icons/social/Instagram.svg" alt="Instagram">
                         </a>
                     </div>
@@ -439,10 +370,7 @@
                         </div>
                         <div class="contacts__triggers">
                             <button class="btn contacts__btn">Отправить сообщение</button>
-                            <div class="contacts__policy">
-                                <input required type="checkbox">
-                                <span>Я согласен (а) с <a href="/policy.html">политикой конфиденциальности</a></span>
-                            </div>
+                            <button class="btn contacts__btn">Скачать CV</button>
                         </div>
                     </form>
                 </div>
@@ -450,6 +378,24 @@
         </div>
     </section>
 
-    <script src="js/script.js"></script>
+    <div class="modal">
+        <div class="modal__dialog">
+            <div class="modal__content">
+                <img class="modal__image" src="img/portfolio/mac.jpg" alt="mac">
+                <div class="modal__wrapper-buttons">
+                    <a class="modal__button" href="#">GitHub</a>
+                    <a class="modal__button" href="#">Проект</a>
+                </div>
+            </div>
+            <div class="modal__content modal__content_descr">
+                <h2 class="modal__title">Ingrad Landing Page</h2>  
+                <p>Адаптивная верстка landing page для компании Иград в команде разработки digital-агентства Digitas. Дизайн и функционал использован впоследствии для главного сайта компании.</p> 
+                <div><strong>STACK:</strong> HTML, CSS, Javascript</div>         
+            </div>
+            <div data-close class="modal__close">&times;</div>
+        </div>
+    </div>
+
+    <script src="js/bundle.js"></script>
 </body>
 </html>

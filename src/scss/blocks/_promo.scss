@@ -1,0 +1,37 @@
+.promo {
+    height: 500px;
+    position: relative;
+    background-color: #BFDAED;
+    padding-top: 205px;
+    &__title {
+        width: 535px;
+        margin-top: 10px;
+    }
+    &__subtitle {
+        position: relative;
+        padding-left: 10px;
+        z-index: 2;
+        @include before_circle;
+    }
+    &__buttons {
+        position: absolute;
+        z-index: 4;
+        margin-top: 25px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 380px;
+    }
+    &__link {
+        color: #000;
+        text-decoration: none;
+        font-weight: 700;
+    }
+
+    &__animation{
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 4;
+    }
+}

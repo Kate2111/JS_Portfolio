@@ -1,18 +1,28 @@
-const hamburger = document.querySelector('.hamburger'),
-    menu = document.querySelector('.menu');
-    close = document.querySelector('.menu__close');
+require('es6-promise').polyfill();
 
-hamburger.addEventListener('click', () => {
-    menu.classList.add('active');
-});
+import hamburger from './modules/hamburger';
+import modal from './modules/modal';
+import tabs from './modules/tab';
+import canvas from './modules/canvas';
 
-close.addEventListener('click', () => {
-    menu.classList.remove('active');
-});
+window.addEventListener('DOMContentLoaded', function() {
 
-const counters = document.querySelectorAll('.skills__ratings-counter'),
-    lines = document.querySelectorAll('.skills__ratings-line span');
+    canvas();
+    hamburger('.hamburger', '.menu', '.menu__close');
+    tabs('.portfolio__tab','.portfolio__items', 'my_button--active', 'portfolio__items--active');
+    modal('[data-modal]', '.modal');
+    fillSkils();
 
-counters.forEach((item, i) => {
-    lines[i].style.width = item.innerHTML;
-});
+
+
+
+    function fillSkils() {
+        const counters = document.querySelectorAll('.skills__ratings-counter'),
+        lines = document.querySelectorAll('.skills__ratings-line span');
+
+        counters.forEach((item, i) => {
+            lines[i].style.width = item.innerHTML;
+        });
+    }
+    
+})

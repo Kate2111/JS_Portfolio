@@ -1,0 +1,23 @@
+.my_button{
+    width: 90px;
+    border: 1px solid  rgba(#454647, .5);
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 28px;
+    text-align: center;
+    color: #8F8D8D;
+    padding: 6px 16px;
+    background-color: transparent;
+    &:hover{
+        background: $main-color;
+        transition: all .4s;
+        color: #363838;
+        cursor: pointer;
+    }
+}
+.my_button--active {
+    border: 1px solid $main-color;
+    background: $main-color;
+    color: #363838;
+}
