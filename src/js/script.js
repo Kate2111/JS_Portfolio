@@ -24,5 +24,14 @@ window.addEventListener('DOMContentLoaded', function() {
             lines[i].style.width = item.innerHTML;
         });
     }
+
+    const portfolio = [
+        {project: 'https://kate2111.github.io/JS_Food/', github: 'https://github.com/Kate2111/JS_Food', stack: '', descr: '', title: 'Магазин правильного питания'},
+        {project: 'https://kate2111.github.io/React_shop/', github: 'https://github.com/Kate2111/React_shop', stack: '', descr: '', title: 'Магазин дизайнерской мебели'},
+        {project: 'https://kate2111.github.io/Vue_food/', github: 'https://github.com/Kate2111/Vue_food', stack: 'Vue, API www.themealdb, Библиотеки Axios, Vuex, Сборка Vite, Маршрутизатор Vue-router', descr: '', title: 'Книга рецептов'},
+        {project: 'https://kate2111.github.io/React_book/', github: 'https://github.com/Kate2111/Vue_food', stack: 'React, Google Book APIs, Сборка Vite, Библиотека Axios', descr: '', title: 'Библиотека'},
+        {project: '', github: '', stack: '', descr: '', title: 'Лендинг. Магазин мебели'},
+        {project: '', github: '', stack: '', descr: '', title: 'Лендинг. Магазин спорттоваров'},
+    ]
     
 })

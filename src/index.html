@@ -50,9 +50,9 @@
 </head>
 <body>
     <aside class="sidepanel">
-        <a class="sidepanel__link" href="https://t.me/Noskova_Ekaterina"><img src="icons/aside/Telegram.svg" alt="Telegram"></a>
-        <a class="sidepanel__link" href="https://github.com/Kate2111"><img src="icons/aside/Github.svg" alt="Github"></a>
-        <a class="sidepanel__link" href="https://instagram.com/noskova_katy"><img src="icons/aside/Instagram (1).svg" alt="Instagram"></a>
+        <a class="sidepanel__link" target="_blank" href="https://t.me/Noskova_Ekaterina"><img src="icons/aside/Telegram.svg" alt="Telegram"></a>
+        <a class="sidepanel__link" target="_blank" href="https://github.com/Kate2111"><img src="icons/aside/Github.svg" alt="Github"></a>
+        <a class="sidepanel__link" target="_blank" href="https://instagram.com/noskova_katy"><img src="icons/aside/Instagram (1).svg" alt="Instagram"></a>
         <div class="sidepanel__divider"></div>
         <div class="sidepanel__text"><span>Социальные сети</span></div>
     </aside>
@@ -99,9 +99,10 @@
         <div class="menu__overlay"></div>
     </div>
 
-    <canvas class="promo__animation"></canvas>
+    
 
     <section class="promo">
+        <canvas class="promo__animation"></canvas>
         <div class="hamburger">
             <span></span>
             <span class="long"></span>
@@ -111,82 +112,48 @@
             <div class="title title_fz16 promo__subtitle">Меня зовут Носкова Екатерина</div>
             <h1 class="title title_fz48 promo__title">Я web-разработчик из города Москва</h1>
             <div class="promo__buttons">
-                <a href="#portfolio" class="promo__link my_button my_button--active">Портфолио</a>
-                <a href="#about" class="promo__link my_button">Про меня</a>
-                <a href="#about" class="promo__link my_button">Скачать  CV</a>
+                <a class="promo__link my_button my_button--active" href="#portfolio">Портфолио</a>
+                <a class="promo__link my_button" href="#about">Про меня</a>
+                <a class="promo__link my_button" href="./Резюме.pdf" download>Скачать  CV</a>
             </div>
         </div>
     </section>
 
-    <section class="resume">
+    <section id="portfolio" class="portfolio">
         <div class="container">
-            <h2 class="title title_fz16 title__section-title">Опыт</h2>
-            <div class="title title_fz36 title__section-subtitle">Чем я буду полезна</div>
-            <div class="divider"></div>
+            <h2 class="title title_fz16 title__section-title">Портфолио</h2>
+            <div class="portfolio__tabs">
+                <button class="my_button portfolio__tab my_button--active">
+                  All
+                </button>
+                <button class="my_button portfolio__tab ">
+                  React
+                </button>
+                <button class="my_button portfolio__tab">
+                  JS
+                </button>
+            </div>
+            <!-- <div class="divider"></div> -->
 
-            <div class="resume__wrapper">
-                <div class="resume__column">
-                    <h3 class="title title_fz20 resume__column-title">Образование</h3>
-                    <ul>
-                        <li>
-                            <div class="resume__item">
-                                <div class="resume__item-heard">
-                                    <div class="resume__item-icon">
-                                        <img src="icons/benefit/University.svg" alt="University">
-                                    </div>
-                                    <h4 class="title title_fz14">МГТУ им. Н. Э. Баумана</h4>
-                                    <div class="resume__item-location">Диплом магистра | Москва (2014-2020)</div>
-                                </div>
-                                <div class="resume__item-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmo. </div>
-                            </div>
-                        </li>
-                    </ul>
-                    <ul>
-                        <li>
-                            <div class="resume__item">
-                                <div class="resume__item-heard">
-                                    <div class="resume__item-icon">
-                                        <img src="icons/benefit/Courses.svg" alt="Courses">
-                                    </div>
-                                    <h4 class="title title_fz14">Udemy</h4>
-                                    <div class="resume__item-location">Курсы по Web-разработке </div>
-                                </div>
-                                <div class="resume__item-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmo. </div>
-                            </div>
-                        </li>
-                    </ul>
-                    
+            <div class="portfolio__wrapper-items">
+                <div class="portfolio__items portfolio__items--active">
+                    <img data-modal class="portfolio__item" src="img/portfolio/uber.jpg" alt="uber">
+                    <img data-modal class="portfolio__item" src="img/portfolio/pulse.jpg" alt="pulse">
+                    <img data-modal class="portfolio__item" src="img/portfolio/bread.jpg" alt="bread">
+                    <img data-modal class="portfolio__item vertical" src="img/portfolio/plans.jpg" alt="plans">
+                    <img data-modal class="portfolio__item" src="img/portfolio/ipad.jpg" alt="ipad">
+                    <img data-modal class="portfolio__item horizonal" src="img/portfolio/mac.jpg" alt="mac">
                 </div>
-                <div class="resume__column">
-                    <h3 class="title title_fz20 resume__column-title">Опыт работы</h3>
-                    <ul>
-                        <li>
-                            <div class="resume__item">
-                                <div class="resume__item-heard">
-                                    <div class="resume__item-icon">
-                                        <img src="icons/benefit/Developer.svg" alt="Developer">
-                                    </div>
-                                    <h4 class="title title_fz14">Front-End Developer</h4>
-                                    <div class="resume__item-location">EPAM | Москва (2018-2019)</div>
-                                </div>
-                                <div class="resume__item-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmo. </div>
-                            </div>
-                        </li>
-                    </ul>
-                    <ul>
-                        <li>
-                            <div class="resume__item">
-                                <div class="resume__item-heard">
-                                    <div class="resume__item-icon">
-                                        <img src="icons/benefit/designer.svg" alt="designer">
-                                    </div>
-                                    <h4 class="title title_fz14">UI/UX Designer</h4>
-                                    <div class="resume__item-location">Squad Team | Москва (2018)</div>
-                                </div>
-                                <div class="resume__item-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmo. </div>
-                            </div>
-                        </li>
-                    </ul>
+                <div class="portfolio__items">
+                    <img data-modal class="portfolio__item" src="img/portfolio/uber.jpg" alt="uber">
+                    <img data-modal class="portfolio__item" src="img/portfolio/pulse.jpg" alt="pulse">
+                    <img data-modal class="portfolio__item" src="img/portfolio/bread.jpg" alt="bread">
+                </div>
+                <div class="portfolio__items">
+                    <img data-modal class="portfolio__item" src="img/portfolio/bread.jpg" alt="bread">
+                    <img data-modal class="portfolio__item" src="img/portfolio/plans.jpg" alt="plans">
+                    <img data-modal class="portfolio__item" src="img/portfolio/ipad.jpg" alt="ipad">
+                    <img data-modal class="portfolio__item" src="img/portfolio/mac.jpg" alt="mac">
                 </div>
             </div>
         </div>
@@ -195,8 +162,8 @@
     <section class="skills">
         <div class="container">
             <h2 class="title title_fz16 title__section-title">Навыки</h2>
-            <div class="title title_fz36 title__section-subtitle">Что я использую в работе</div>
-            <div class="divider"></div>
+            <!-- <div class="title title_fz36 title__section-subtitle">Что я использую в работе</div>
+            <div class="divider"></div> -->
 
             <div class="skills__ratings">
                 <div class="skills__ratings-item">
@@ -245,41 +212,73 @@
         </div>
     </section> 
 
-    <section id="portfolio" class="portfolio">
+    <section class="resume">
         <div class="container">
-            <h2 class="title title_fz16 title__section-title">Портфолио</h2>
-            <div class="portfolio__tabs">
-                <button class="my_button portfolio__tab my_button--active">
-                  All
-                </button>
-                <button class="my_button portfolio__tab ">
-                  React
-                </button>
-                <button class="my_button portfolio__tab">
-                  JS
-                </button>
-            </div>
-            <div class="divider"></div>
+            <h2 class="title title_fz16 title__section-title">Обучение</h2>
+            <!-- <div class="title title_fz36 title__section-subtitle">Чем я буду полезна</div>
+            <div class="divider"></div> -->
 
-            <div class="portfolio__wrapper-items">
-                <div class="portfolio__items portfolio__items--active">
-                    <img data-modal class="portfolio__item" src="img/portfolio/uber.jpg" alt="uber">
-                    <img data-modal class="portfolio__item" src="img/portfolio/pulse.jpg" alt="pulse">
-                    <img data-modal class="portfolio__item" src="img/portfolio/bread.jpg" alt="bread">
-                    <img data-modal class="portfolio__item vertical" src="img/portfolio/plans.jpg" alt="plans">
-                    <img data-modal class="portfolio__item" src="img/portfolio/ipad.jpg" alt="ipad">
-                    <img data-modal class="portfolio__item horizonal" src="img/portfolio/mac.jpg" alt="mac">
+            <div class="resume__wrapper">
+                <div class="resume__column">
+                    <ul>
+                        <li>
+                            <div class="resume__item">
+                                <div class="resume__item-heard">
+                                    <div class="resume__item-icon">
+                                        <img src="icons/benefit/University.svg" alt="University">
+                                    </div>
+                                    <h4 class="title title_fz14">ХГАЭиП</h4>
+                                    <div class="resume__item-location">Диплом экономиста | Хабаровск (2012-2016)</div>
+                                </div>
+                                <div class="resume__item-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmo. </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <div class="resume__item">
+                                <div class="resume__item-heard">
+                                    <div class="resume__item-icon">
+                                        <img src="icons/benefit/Courses.svg" alt="Courses">
+                                    </div>
+                                    <h4 class="title title_fz14">Udemy</h4>
+                                    <div class="resume__item-location">Курсы по Web-разработке </div>
+                                </div>
+                                <div class="resume__item-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmo. </div>
+                            </div>
+                        </li>
+                    </ul>
+                    
                 </div>
-                <div class="portfolio__items">
-                    <img data-modal class="portfolio__item" src="img/portfolio/uber.jpg" alt="uber">
-                    <img data-modal class="portfolio__item" src="img/portfolio/pulse.jpg" alt="pulse">
-                    <img data-modal class="portfolio__item" src="img/portfolio/bread.jpg" alt="bread">
-                </div>
-                <div class="portfolio__items">
-                    <img data-modal class="portfolio__item" src="img/portfolio/bread.jpg" alt="bread">
-                    <img data-modal class="portfolio__item" src="img/portfolio/plans.jpg" alt="plans">
-                    <img data-modal class="portfolio__item" src="img/portfolio/ipad.jpg" alt="ipad">
-                    <img data-modal class="portfolio__item" src="img/portfolio/mac.jpg" alt="mac">
+                <div class="resume__column">
+                    <ul>
+                        <li>
+                            <div class="resume__item">
+                                <div class="resume__item-heard">
+                                    <div class="resume__item-icon">
+                                        <img src="icons/benefit/Developer.svg" alt="Developer">
+                                    </div>
+                                    <h4 class="title title_fz14">Front-End Developer</h4>
+                                    <div class="resume__item-location">EPAM | Москва (2018-2019)</div>
+                                </div>
+                                <div class="resume__item-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmo. </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <div class="resume__item">
+                                <div class="resume__item-heard">
+                                    <div class="resume__item-icon">
+                                        <img src="icons/benefit/designer.svg" alt="designer">
+                                    </div>
+                                    <h4 class="title title_fz14"></h4>
+                                    <div class="resume__item-location">Группа компаний софия | Москва (2018)</div>
+                                </div>
+                                <div class="resume__item-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmo. </div>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -290,10 +289,10 @@
             <div class="about__wrapper">
                 <div class="about__descr">
                     <h2 class="title title_fz16 title__section-title">Про меня</h2>
-                    <div class="title title_fz36 title__section-subtitle">Меня зовут Екатерина</div>
-                    <div class="divider"></div>
+                    <!-- <div class="title title_fz36 title__section-subtitle">Меня зовут Екатерина</div> -->
+                    <!-- <div class="divider"></div> -->
                     <p class="about__text">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi adipisci nisi ullam quibusdam aliquam. Tempora, aperiam ipsam! Nobis accusamus reprehenderit sint rerum commodi necessitatibus, exercitationem doloribus voluptatibus illum minus ipsam.
+                        Меня зовут Катя, я Фронтенд разработчик и мне нравится создавать полезные и понятные веб-приложения, которые привлекут и удовлетворят потребности пользователей. Я готова к интересным задачам и профессиональному росту. Ищу дружный коллектив, в котором смогу и дальше развиваться в области FrontEnd разработки.
                     </p>
                 </div>
                 <div class="about__skills">
@@ -343,13 +342,13 @@
 
                     <div class="title title_fz14 contacts__text">Любым удобным для вас способом:</div>
                     <div class="contacts__social">
-                        <a class="contacts__link" href="https://github.com/Kate2111" >
+                        <a class="contacts__link" target="_blank" href="https://github.com/Kate2111" >
                             <img src="icons/social/Facebook.svg" alt="GitHub">
                         </a>
-                        <a class="contacts__link" href="https://t.me/Noskova_Ekaterina" >
+                        <a class="contacts__link" target="_blank" href="https://t.me/Noskova_Ekaterina" >
                             <img src="icons/social/Telegram.svg" alt="Telegram">
                         </a>
-                        <a class="contacts__link" href="https://instagram.com/noskova_katy">
+                        <a class="contacts__link" target="_blank" href="https://instagram.com/noskova_katy">
                             <img src="icons/social/Instagram.svg" alt="Instagram">
                         </a>
                     </div>
@@ -369,8 +368,8 @@
                             <label for="text">Ваше сообщение</label>
                         </div>
                         <div class="contacts__triggers">
-                            <button class="btn contacts__btn">Отправить сообщение</button>
-                            <button class="btn contacts__btn">Скачать CV</button>
+                            <button class="my_button my_button--active contacts__btn">Отправить сообщение</button>
+                            <button class="my_button my_button--active contacts__btn" href="./Резюме.pdf">Скачать CV</button>
                         </div>
                     </form>
                 </div>
@@ -383,8 +382,8 @@
             <div class="modal__content">
                 <img class="modal__image" src="img/portfolio/mac.jpg" alt="mac">
                 <div class="modal__wrapper-buttons">
-                    <a class="modal__button" href="#">GitHub</a>
-                    <a class="modal__button" href="#">Проект</a>
+                    <a class="modal__button" target="_blank" href="#">GitHub</a>
+                    <a class="modal__button" target="_blank" href="#">Проект</a>
                 </div>
             </div>
             <div class="modal__content modal__content_descr">

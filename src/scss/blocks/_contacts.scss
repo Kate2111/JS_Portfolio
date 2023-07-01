@@ -1,5 +1,5 @@
 .contacts {
-    padding: 120px 0 90px 0;
+    padding: 80px 0 90px 0;
     &__wrapper {
         padding: 0 35px 0 52px;
         display: grid;
@@ -37,7 +37,7 @@
         display: grid;
         grid-template: 45px 190px 45px / repeat(2, 280px);
         justify-content: space-between;
-        row-gap: 27px;
+        row-gap: 30px;
     }
     &__triggers{
         grid-column: 1 / 3;
