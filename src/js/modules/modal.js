@@ -34,3 +34,5 @@ function modal(triggerSelector, modalSelector) {
 }
 
 export default modal;
+export {closeModal};
+export {openModal};

@@ -4,6 +4,8 @@ import hamburger from './modules/hamburger';
 import modal from './modules/modal';
 import tabs from './modules/tab';
 import canvas from './modules/canvas';
+import forms from './modules/forms';
+
 
 window.addEventListener('DOMContentLoaded', function() {
 
@@ -12,6 +14,7 @@ window.addEventListener('DOMContentLoaded', function() {
     tabs('.portfolio__tab','.portfolio__items', 'my_button--active', 'portfolio__items--active');
     modal('[data-modal]', '.modal');
     fillSkils();
+    forms('form');
 
 
 
