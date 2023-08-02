@@ -1,1 +1,7 @@
 $main-color: rgb(255, 166, 0);
+
+:root {
+    --dark: #fdfafa;
+    --sixeindex: calc(1vw * 1vh);
+    --transition: .75s cubic-bezier(.2, .6, 0, 1);
+}

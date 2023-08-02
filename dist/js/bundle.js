@@ -16364,6 +16364,81 @@ function canvas() {
 
 /***/ }),
 
+/***/ "./src/js/modules/cards.js":
+/*!*********************************!*\
+  !*** ./src/js/modules/cards.js ***!
+  \*********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _services__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./services */ "./src/js/modules/services.js");
+
+async function cards(elem) {
+  class ProjectInfo {
+    constructor(src, alt, title, descr, github, project, stack, parentSelector) {
+      this.src = src;
+      this.alt = alt;
+      this.title = title;
+      this.descr = descr;
+      this.github = github;
+      this.project = project;
+      this.stack = stack;
+      this.parent = document.querySelector(parentSelector);
+    }
+    render() {
+      const element = document.createElement('div');
+      element.classList.add('modal');
+      element.innerHTML = `
+                <div class="modal__dialog">
+                    <div class="modal__content">
+                        <img class="modal__image" src=${this.src} alt=${this.alt}>
+                        <div class="modal__wrapper-buttons">
+                            <a class="modal__button" target="_blank" href=${this.github}>GitHub</a>
+                            <a class="modal__button" target="_blank" href=${this.project}>Проект</a>
+                        </div>
+                    </div>
+                    <div class="modal__content modal__content_descr">
+                        <h2 class="modal__title">${this.title}</h2>  
+                        <p>${this.descr}</p> 
+                        <div><strong>STACK:</strong>${this.stack}</div>         
+                    </div>
+                    <div data-close class="modal__close">&times;</div>
+                </div>
+            `;
+      this.parent.append(element);
+    }
+  }
+
+  //const items = document.querySelectorAll('.portfolio__items');
+
+  new ProjectInfo(elem.src, elem.alt, elem.title, elem.descr, elem.github, elem.project, elem.stack, '.portfolio .portfolio__items--active').render();
+
+  /*  try {
+       //const data = await getResource("portfolio");
+       //const data = portfolio;
+       
+       data.forEach(({ src, alt, title, descr, github, project, stack }, index) => {
+           new ProjectInfo(src, alt, title, descr, github, project, stack, '.portfolio .portfolio__items--active').render();
+       });
+         
+       
+         
+   } catch (error) {
+       console.error(error);
+       const errorMessage = document.createElement('div');
+       errorMessage.textContent = "Произошла ошибка при загрузке данных. Пожалуйста, повторите попытку позже.";
+       document.querySelector('.menu__field').firstElementChild.appendChild(errorMessage);
+   } */
+}
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (cards);
+
+/***/ }),
+
 /***/ "./src/js/modules/forms.js":
 /*!*********************************!*\
   !*** ./src/js/modules/forms.js ***!
@@ -16468,33 +16543,80 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__),
 /* harmony export */   openModal: () => (/* binding */ openModal)
 /* harmony export */ });
-function closeModal(modalSelector) {
-  const modal = document.querySelector(modalSelector);
+/* harmony import */ var _cards__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./cards */ "./src/js/modules/cards.js");
+
+const portfolio = [{
+  project: 'https://kate2111.github.io/React_shop/',
+  github: 'https://github.com/Kate2111/React_shop',
+  stack: 'React, Create React App, React Router, CSS Modules, Firebase (Database, Store,Authentication), React Hooks',
+  descr: 'Многостраничный интернет-магазин мебели. Авторизованный пользователь имеет возможность добавлять товар в избранное и корзину. Реальзован 3D эффект на главном экране, автоматическая карусель новой коллекции.',
+  title: 'Магазин дизайнерской мебели',
+  src: '../../img/portfolio/furniture.jpg',
+  alt: 'furniture'
+}, {
+  project: 'https://kate2111.github.io/JS_RunSmart/',
+  github: 'https://github.com/Kate2111/JS_RunSmart',
+  stack: 'JavaScript, Firebase Database, Gulp + Webpack, Slick slider, Методология БЭМ',
+  descr: 'Страница сверстана в стили Langing Page. Реализованы модальные окна для заказа консультации, анимация, карусель просмотра фото, настроена форма обратной связи(заявки приходят на почту администратора)',
+  title: 'Магазин спорттоваров',
+  src: '../../img/portfolio/pulse.jpg',
+  alt: 'pulse'
+}, {
+  project: 'https://kate2111.github.io/JS_Food/',
+  github: 'https://github.com/Kate2111/JS_Food',
+  stack: 'JavaScript, Firebase Database, Gulp + Webpack, Методология БЭМ',
+  descr: 'Страница сверстана в стили Langing Page. Реализованы модальные окна для связи с магазином, расчет суточной нормы каллорий для пользователя, обратный таймер отсчета до завершения акции. Регистрация и авторизация пользователя.',
+  title: 'Магазин продуктов правильного питания',
+  src: '../../img/portfolio/food.jpg',
+  alt: 'food'
+}, {
+  project: 'https://kate2111.github.io/React_book/',
+  github: 'https://github.com/Kate2111/React_book',
+  stack: 'React, Google Book APIs, Сборка Vite, Библиотека Axios, React Router, CSS Modules, React Hooks',
+  descr: 'С помощью данного приложения можно ознакомится с книгами из библиотеки, добавить новую или удалить из списка существующую. Реализован фильтр книг по названию/описанию и поиск книг по библиотеке',
+  title: 'Библиотека',
+  src: '../../img/portfolio/plans.jpg',
+  alt: 'book'
+}, {
+  project: 'https://kate2111.github.io/Vue_food/',
+  github: 'https://github.com/Kate2111/Vue_food',
+  stack: 'Vue, API www.themealdb, Библиотеки Axios, Vuex, Сборка Vite, Маршрутизатор Vue-router',
+  descr: 'Сборник рецептов с подробным описанием, ссылкой  на видео рецепт на YouTube. Реализованы три вида поиска: по названию рецепта, по ингридиету и алфавиту',
+  title: 'Книга рецептов',
+  src: '../../img/portfolio/bread.jpg',
+  alt: 'meals'
+}];
+function closeModal(modal) {
   modal.classList.add('hide');
   modal.classList.remove('show');
   document.body.style.overflow = '';
 }
 function openModal(modalSelector, event) {
   const modal = document.querySelector(modalSelector);
+  console.log(modal);
   modal.classList.add('show');
   modal.classList.remove('hide');
   document.body.style.overflow = 'hidden';
-}
-function modal(triggerSelector, modalSelector) {
-  const modalTrigger = document.querySelectorAll(triggerSelector);
-  const modal = document.querySelector(modalSelector);
-  modalTrigger.forEach(btn => {
-    btn.addEventListener('click', () => openModal(modalSelector));
-  });
   modal.addEventListener('click', e => {
     if (e.target === modal || e.target.getAttribute('data-close') == '') {
-      closeModal(modalSelector);
+      closeModal(modal);
     }
   });
   document.addEventListener('keydown', e => {
     if (e.code === 'Escape' && modal.classList.contains('show')) {
-      closeModal(modalSelector);
+      closeModal(modal);
     }
+  });
+}
+function modal(triggerSelector, modalSelector) {
+  const modalTrigger = document.querySelectorAll(triggerSelector);
+  modalTrigger.forEach((btn, index) => {
+    btn.addEventListener('click', () => {
+      console.log(index);
+      console.log(portfolio[index]);
+      (0,_cards__WEBPACK_IMPORTED_MODULE_0__["default"])(portfolio[index]);
+      openModal(modalSelector);
+    });
   });
 }
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (modal);
@@ -20010,7 +20132,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_tab__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/tab */ "./src/js/modules/tab.js");
 /* harmony import */ var _modules_canvas__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/canvas */ "./src/js/modules/canvas.js");
 /* harmony import */ var _modules_forms__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/forms */ "./src/js/modules/forms.js");
+/* harmony import */ var _modules_cards__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/cards */ "./src/js/modules/cards.js");
 (__webpack_require__(/*! es6-promise */ "./node_modules/es6-promise/dist/es6-promise.js").polyfill)();
+
 
 
 
@@ -20018,6 +20142,7 @@ __webpack_require__.r(__webpack_exports__);
 
 window.addEventListener('DOMContentLoaded', function () {
   (0,_modules_canvas__WEBPACK_IMPORTED_MODULE_3__["default"])();
+  //cards();
   (0,_modules_hamburger__WEBPACK_IMPORTED_MODULE_0__["default"])('.hamburger', '.menu', '.menu__close');
   (0,_modules_tab__WEBPACK_IMPORTED_MODULE_2__["default"])('.portfolio__tab', '.portfolio__items', 'my_button--active', 'portfolio__items--active');
   (0,_modules_modal__WEBPACK_IMPORTED_MODULE_1__["default"])('[data-modal]', '.modal');
@@ -20030,43 +20155,6 @@ window.addEventListener('DOMContentLoaded', function () {
       lines[i].style.width = item.innerHTML;
     });
   }
-  const portfolio = [{
-    project: 'https://kate2111.github.io/JS_Food/',
-    github: 'https://github.com/Kate2111/JS_Food',
-    stack: '',
-    descr: '',
-    title: 'Магазин правильного питания'
-  }, {
-    project: 'https://kate2111.github.io/React_shop/',
-    github: 'https://github.com/Kate2111/React_shop',
-    stack: '',
-    descr: '',
-    title: 'Магазин дизайнерской мебели'
-  }, {
-    project: 'https://kate2111.github.io/Vue_food/',
-    github: 'https://github.com/Kate2111/Vue_food',
-    stack: 'Vue, API www.themealdb, Библиотеки Axios, Vuex, Сборка Vite, Маршрутизатор Vue-router',
-    descr: '',
-    title: 'Книга рецептов'
-  }, {
-    project: 'https://kate2111.github.io/React_book/',
-    github: 'https://github.com/Kate2111/Vue_food',
-    stack: 'React, Google Book APIs, Сборка Vite, Библиотека Axios',
-    descr: '',
-    title: 'Библиотека'
-  }, {
-    project: '',
-    github: '',
-    stack: '',
-    descr: '',
-    title: 'Лендинг. Магазин мебели'
-  }, {
-    project: '',
-    github: '',
-    stack: '',
-    descr: '',
-    title: 'Лендинг. Магазин спорттоваров'
-  }];
 });
 })();
 

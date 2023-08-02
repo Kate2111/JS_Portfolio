@@ -1,7 +1,8 @@
 import {getResource} from './services';
 
-async function cards() {
-     class MenuCard {
+
+async function cards(elem) {
+     class ProjectInfo {
         constructor(src, alt, title, descr, github, project, stack, parentSelector) {
             this.src = src;
             this.alt = alt;
@@ -20,16 +21,16 @@ async function cards() {
             element.innerHTML = `
                 <div class="modal__dialog">
                     <div class="modal__content">
-                        <img class="modal__image" src=${src} alt=${alt}>
+                        <img class="modal__image" src=${this.src} alt=${this.alt}>
                         <div class="modal__wrapper-buttons">
-                            <a class="modal__button" target="_blank" href=${github}>GitHub</a>
-                            <a class="modal__button" target="_blank" href=${project}>Проект</a>
+                            <a class="modal__button" target="_blank" href=${this.github}>GitHub</a>
+                            <a class="modal__button" target="_blank" href=${this.project}>Проект</a>
                         </div>
                     </div>
                     <div class="modal__content modal__content_descr">
-                        <h2 class="modal__title">${title}</h2>  
-                        <p>${descr}</p> 
-                        <div><strong>STACK:</strong>${stack}</div>         
+                        <h2 class="modal__title">${this.title}</h2>  
+                        <p>${this.descr}</p> 
+                        <div><strong>STACK:</strong>${this.stack}</div>         
                     </div>
                     <div data-close class="modal__close">&times;</div>
                 </div>
@@ -38,22 +39,28 @@ async function cards() {
         }
     }
 
-    
-    try {
-        const data = await getResource("portfolio");
-        if (data && Array.isArray(data)) {
-          data.forEach(({ img, altimg, title, descr, price }) => {
-            new MenuCard(img, altimg, title, descr, price, '.menu .container').render();
-          });
-        } else {
-          throw new Error("Ошибка при получении данных из базы данных");
-        }
+    //const items = document.querySelectorAll('.portfolio__items');
+
+    new ProjectInfo(elem.src, elem.alt, elem.title, elem.descr, elem.github, elem.project, elem.stack, '.portfolio .portfolio__items--active').render();
+
+   /*  try {
+        //const data = await getResource("portfolio");
+        //const data = portfolio;
+        
+        data.forEach(({ src, alt, title, descr, github, project, stack }, index) => {
+            new ProjectInfo(src, alt, title, descr, github, project, stack, '.portfolio .portfolio__items--active').render();
+        });
+
+        
+        
+
+        
     } catch (error) {
         console.error(error);
         const errorMessage = document.createElement('div');
         errorMessage.textContent = "Произошла ошибка при загрузке данных. Пожалуйста, повторите попытку позже.";
         document.querySelector('.menu__field').firstElementChild.appendChild(errorMessage);
-    }
+    } */
 }
 
 export default cards;
