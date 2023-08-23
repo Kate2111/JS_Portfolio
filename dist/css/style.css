@@ -45,6 +45,11 @@
   color: #363838;
 }
 
+body {
+  background-color: #2f2d2d;
+  color: white;
+}
+
 * {
   font-family: "Poppins", sans-serif;
   margin: 0;
@@ -112,7 +117,6 @@
 .promo {
   height: 500px;
   position: relative;
-  background-color: #BFDAED;
   padding-top: 205px;
 }
 .promo__title {
@@ -145,7 +149,6 @@
   width: 380px;
 }
 .promo__link {
-  color: #000;
   text-decoration: none;
   font-weight: 700;
 }
@@ -590,8 +593,8 @@
 .portfolio__items {
   margin-top: 31px;
   display: none;
-  grid-template: repeat(2, 280px)/repeat(4, 280px);
-  grid-auto-rows: 280px;
+  grid-template-columns: repeat(4, 280px);
+  grid-auto-rows: 260px;
   gap: 5px;
 }
 .portfolio__items .vertical {
@@ -606,7 +609,7 @@
   display: grid;
 }
 .portfolio__tabs {
-  max-width: 300px;
+  max-width: 400px;
   margin-top: 31px;
   display: flex;
   justify-content: space-between;
@@ -797,7 +800,7 @@
 .modal__content {
   width: 100%;
   padding: 40px;
-  background-color: #fff;
+  background-color: #2f2d2d;
   max-height: 80vh;
   overflow-y: auto;
 }

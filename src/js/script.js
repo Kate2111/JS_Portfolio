@@ -1,20 +1,18 @@
 require('es6-promise').polyfill();
 
-import hamburger from './modules/hamburger';
 import modal from './modules/modal';
 import tabs from './modules/tab';
 import canvas from './modules/canvas';
 import forms from './modules/forms';
-import cards from './modules/cards'
-
 
 window.addEventListener('DOMContentLoaded', function() {
 
     canvas();
-    //cards();
-    hamburger('.hamburger', '.menu', '.menu__close');
     tabs('.portfolio__tab','.portfolio__items', 'my_button--active', 'portfolio__items--active');
-    modal('[data-modal]', '.modal');
+    modal('[data-all]', '.modal');
+    modal('[data-react]', '.modal');
+    modal('[data-js]', '.modal');
+    modal('[data-vue]', '.modal');
     fillSkils();
     forms('form');
 

@@ -4,6 +4,10 @@
 @import 'libs/fonts';
 @import 'libs/buttons';
 
+body{
+    background-color: $color-black;
+    color: $color-text;
+}
 
 * {
     font-family: 'Poppins', sans-serif;
