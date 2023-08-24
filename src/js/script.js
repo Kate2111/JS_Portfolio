@@ -5,25 +5,37 @@ import tabs from './modules/tab';
 import canvas from './modules/canvas';
 import forms from './modules/forms';
 
-window.addEventListener('DOMContentLoaded', function() {
 
+window.addEventListener('DOMContentLoaded', function() {
     canvas();
+    skillsHandler();
     tabs('.portfolio__tab','.portfolio__items', 'my_button--active', 'portfolio__items--active');
+ 
     modal('[data-all]', '.modal');
     modal('[data-react]', '.modal');
     modal('[data-js]', '.modal');
     modal('[data-vue]', '.modal');
-    fillSkils();
+   
     forms('form');
 
+    
 
-    function fillSkils() {
-        const counters = document.querySelectorAll('.skills__ratings-counter'),
-        lines = document.querySelectorAll('.skills__ratings-line span');
+    function skillsHandler() {
+        new WOW().init();
 
-        counters.forEach((item, i) => {
-            lines[i].style.width = item.innerHTML;
-        });
+
+        const skills = document.querySelectorAll('.skills__item');
+
+        skills.forEach(item => {
+            item.addEventListener('mouseover', () => {
+                item.classList.remove('wow',  'fadeIn');
+                item.removeAttribute('style');
+                item.classList.add('animate__animated', 'animate__heartBeat');
+            })
+            item.addEventListener('mouseout', () => {
+                item.classList.remove('animate__animated', 'animate__heartBeat');
+            })
+        })
     }
 
 })

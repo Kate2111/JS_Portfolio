@@ -20084,18 +20084,25 @@ __webpack_require__.r(__webpack_exports__);
 
 window.addEventListener('DOMContentLoaded', function () {
   (0,_modules_canvas__WEBPACK_IMPORTED_MODULE_2__["default"])();
+  skillsHandler();
   (0,_modules_tab__WEBPACK_IMPORTED_MODULE_1__["default"])('.portfolio__tab', '.portfolio__items', 'my_button--active', 'portfolio__items--active');
   (0,_modules_modal__WEBPACK_IMPORTED_MODULE_0__["default"])('[data-all]', '.modal');
   (0,_modules_modal__WEBPACK_IMPORTED_MODULE_0__["default"])('[data-react]', '.modal');
   (0,_modules_modal__WEBPACK_IMPORTED_MODULE_0__["default"])('[data-js]', '.modal');
   (0,_modules_modal__WEBPACK_IMPORTED_MODULE_0__["default"])('[data-vue]', '.modal');
-  fillSkils();
   (0,_modules_forms__WEBPACK_IMPORTED_MODULE_3__["default"])('form');
-  function fillSkils() {
-    const counters = document.querySelectorAll('.skills__ratings-counter'),
-      lines = document.querySelectorAll('.skills__ratings-line span');
-    counters.forEach((item, i) => {
-      lines[i].style.width = item.innerHTML;
+  function skillsHandler() {
+    new WOW().init();
+    const skills = document.querySelectorAll('.skills__item');
+    skills.forEach(item => {
+      item.addEventListener('mouseover', () => {
+        item.classList.remove('wow', 'fadeIn');
+        item.removeAttribute('style');
+        item.classList.add('animate__animated', 'animate__heartBeat');
+      });
+      item.addEventListener('mouseout', () => {
+        item.classList.remove('animate__animated', 'animate__heartBeat');
+      });
     });
   }
 });

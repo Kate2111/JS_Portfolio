@@ -1,4 +1,4 @@
-.skills {
+/* .skills {
     padding-top: 60px;
     &__wrapper {
         margin-top: 60px;
@@ -19,10 +19,10 @@
             position: relative;
             padding: 2px 0 0 13px;
             @include before_circle;
-            /* &:before {
+            &:before {
                 top: -7px;
                 left: -13px;
-            } */
+            }
         }
         &-item {
             display: grid;
@@ -47,5 +47,28 @@
                 border-radius: 4px;
             }
         }
+    }
+} */
+
+.skills {
+    padding-top: 60px;
+    &__brands{
+        max-width: 1000px;
+        justify-content: center;
+        margin-top: 4rem;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &__item{
+        text-align: center;
+        margin: 0 0 30px;
+        font-size: 16px;
+        margin: 0 30px 3rem;
+    }
+    img{
+        width: 70px;
+        height: 70px;
     }
 }

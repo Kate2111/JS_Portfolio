@@ -46,6 +46,8 @@
     <meta name="theme-color" content="#ffffff">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/style.css">
 
 </head>
@@ -92,23 +94,23 @@
 
             <div class="portfolio__wrapper-items">
                 <div class="portfolio__items portfolio__items--active">
-                    <img data-all class="portfolio__item" src="img/portfolio/furniture.jpg" alt="furniture">
-                    <img data-all class="portfolio__item" src="img/portfolio/pulse.jpg" alt="pulse">
-                    <img data-all class="portfolio__item" src="img/portfolio/food.jpg" alt="food">
-                    <img data-all class="portfolio__item vertical" src="img/portfolio/book.jpg" alt="book">
-                    <img data-all class="portfolio__item" src="img/portfolio/meals.jpg" alt="meals">
-                    <img data-all class="portfolio__item horizonal" src="img/portfolio/shop.jpg" alt="meals">
+                    <img class="portfolio__item wow fadeInUp" data-all src="img/portfolio/furniture.jpg" alt="furniture">
+                    <img class="portfolio__item wow fadeInUp" data-all src="img/portfolio/pulse.jpg" alt="pulse">
+                    <img class="portfolio__item wow fadeInUp" data-all src="img/portfolio/food.jpg" alt="food">
+                    <img class="portfolio__item wow fadeInUp vertical" data-wow-delay="1s" data-all src="img/portfolio/book.jpg" alt="book">
+                    <img class="portfolio__item wow fadeInUp" data-wow-delay="1s" data-all src="img/portfolio/meals.jpg" alt="meals">
+                    <img class="portfolio__item wow fadeInUp horizonal" data-wow-delay="1s" src="img/portfolio/shop.jpg" alt="meals">
                 </div>
                 <div class="portfolio__items">
-                    <img data-react class="portfolio__item" src="img/portfolio/furniture.jpg" alt="furniture">
-                    <img data-react class="portfolio__item" src="img/portfolio/book.webp" alt="book">
+                    <img class="portfolio__item animate__animated animate__fadeInLeft animate__delay-1s" style="--animate-delay: 0.3s; --animate-duration: 2s;" data-react src="img/portfolio/furniture.jpg" alt="furniture">
+                    <img class="portfolio__item animate__animated animate__fadeInLeft" data-react src="img/portfolio/book.jpg" alt="book">
                 </div>
                 <div class="portfolio__items">
-                    <img data-js class="portfolio__item" src="img/portfolio/pulse.jpg" alt="pulse">
-                    <img data-js class="portfolio__item" src="img/portfolio/food.jpg" alt="food">
+                    <img class="portfolio__item  animate__animated animate__fadeInLeft animate__delay-1s" style="--animate-delay: 0.3s; --animate-duration: 2s;" data-js src="img/portfolio/pulse.jpg" alt="pulse">
+                    <img class="portfolio__item  animate__animated animate__fadeInLeft" data-js src="img/portfolio/food.jpg" alt="food">
                 </div>
                 <div class="portfolio__items">
-                    <img data-vue class="portfolio__item" src="img/portfolio/meals.webp" alt="meals">
+                    <img class="portfolio__item  animate__animated animate__fadeInLeft" data-vue src="img/portfolio/meals.webp" alt="meals">
                 </div>
             </div>
         </div>
@@ -116,11 +118,11 @@
 
     <section class="skills">
         <div class="container">
-            <h2 class="title title_fz16 title__section-title">Навыки</h2>
+            <h2 class="title title_fz16 title__section-title">Что я использую в работе</h2>
             <!-- <div class="title title_fz36 title__section-subtitle">Что я использую в работе</div>
             <div class="divider"></div> -->
 
-            <div class="skills__ratings">
+            <!-- <div class="skills__ratings">
                 <div class="skills__ratings-item">
                     <div class="title title_fz14 skills__ratings-title">Создание сайтов</div>
                     <div class="skills__ratings-counter">100%</div>
@@ -162,6 +164,64 @@
                     <div class="skills__ratings-line">
                         <span></span>
                     </div>
+                </div>
+            </div> -->
+            <div class="skills__brands">
+                <div class="skills__item wow fadeIn" data-wow-delay="0.1s">
+                    <img src="img/skills/js.svg" alt="JS">
+                    <p>JavaScript</p>
+                </div>
+                <div class="skills__item wow fadeIn" data-wow-delay="0.2s">
+                    <img src="img/skills/react.svg" alt="React">
+                    <p>React</p>
+                </div>
+                <div class="skills__item wow fadeIn" data-wow-delay="0.3s">
+                    <img src="img/skills/vue.svg" alt="Vue">
+                    <p>Vue</p>
+                </div>
+                <div class="skills__item wow fadeIn" data-wow-delay="0.4s">
+                    <img src="img/skills/ts.svg" alt="TS">
+                    <p>Type Script</p>
+                </div>
+                <div class="skills__item wow fadeIn" data-wow-delay="0.5s">
+                    <img src="img/skills/sass.svg" alt="Sass">
+                    <p>SASS</p>
+                </div>
+                <div class="skills__item wow fadeIn" data-wow-delay="0.6s">
+                    <img src="img/skills/css.svg" alt="CSS">
+                    <p>CSS3</p>
+                </div>
+                <div class="skills__item wow fadeIn" data-wow-delay="0.7s">
+                    <img src="img/skills/bootstrap.svg" alt="Bootstrap">
+                    <p>Bootstrap</p>
+                </div>
+                <div class="skills__item wow fadeIn" data-wow-delay="0.8s">
+                    <img src="img/skills/html.svg" alt="HTML5">
+                    <p>HTML5</p>
+                </div>
+                <div class="skills__item wow fadeIn" data-wow-delay="0.9s">
+                    <img src="img/skills/git.svg" alt="Git">
+                    <p>Git</p>
+                </div>
+                <div class="skills__item wow fadeIn" data-wow-delay="1s">
+                    <img src="img/skills/gulp.svg" alt="Gulp">
+                    <p>Gulp</p>
+                </div>
+                <div class="skills__item wow fadeIn" data-wow-delay="1.1s">
+                    <img src="img/skills/webpack.svg" alt="Webpack">
+                    <p>Webpack</p>
+                </div>
+                <div class="skills__item wow fadeIn" data-wow-delay="1.2s">
+                    <img src="img/skills/vite.svg" alt="Vite">
+                    <p>Vite</p>
+                </div>
+                <div class="skills__item wow fadeIn" data-wow-delay="1.3s">
+                    <img src="img/skills/vscode.svg" alt="Visual Studio">
+                    <p>Visual Studio</p>
+                </div>
+                <div  class="skills__item wow fadeIn" data-wow-delay="1.4s">
+                    <img src="img/skills/figma.svg" alt="Figma">
+                    <p>Figma</p>
                 </div>
             </div>
         </div>
@@ -331,26 +391,7 @@
         </div>
     </section>
 
-  <!--   <div class="modal">
-        <div class="modal__dialog">
-            <div class="modal__content">
-                <img class="modal__image" src="img/portfolio/mac.jpg" alt="mac">
-                <div class="modal__wrapper-buttons">
-                    <a class="modal__button" target="_blank" href="#">GitHub</a>
-                    <a class="modal__button" target="_blank" href="#">Проект</a>
-                </div>
-            </div>
-            <div class="modal__content modal__content_descr">
-                <h2 class="modal__title">Ingrad Landing Page</h2>  
-                <p>Адаптивная верстка landing page для компании Иград в команде разработки digital-агентства Digitas. Дизайн и функционал использован впоследствии для главного сайта компании.</p> 
-                <div><strong>STACK:</strong> HTML, CSS, Javascript</div>         
-            </div>
-            <div data-close class="modal__close">&times;</div>
-        </div>
-    </div> -->
-
-    
-
+    <script src="js/wow.min.js"></script>
     <script src="js/bundle.js"></script>
 </body>
 </html>
