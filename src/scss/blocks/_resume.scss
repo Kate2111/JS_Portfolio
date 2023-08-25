@@ -18,10 +18,13 @@
         margin-top: 60px;
         padding: 0 65px;
         display: grid;
-        grid-template-columns: repeat(2, 425px);
-        column-gap: 130px;
+        grid-template-columns: repeat(3, 300px);
+        column-gap: 120px;
     }
     &__column {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
         &-title {
             position: relative;
             padding-left: 35px;
@@ -44,11 +47,11 @@
                 &:after {
                     content: '';
                     width: 1px;
-                    height: calc(100% + 16px);
+                    height: calc(100% + 33px);
                     position: absolute;
-                    top: -7px;
+                    top: 0px;
                     left: 0;
-                    background-color: #000;
+                    background-color: $color-text;
                 }
             }
         }
@@ -61,12 +64,15 @@
             width: 45px;
             top: 68px;
             position: absolute;
-            background-color: #000;
+            background-color: $color-text;
         }
         &-heard {
             position: relative;
             padding: 45px 0 0 100px;
             display: grid;
+            color: $color-text;
+            text-decoration: none;
+            cursor: pointer;
             h4 {
                 margin-bottom: 0;
             }
