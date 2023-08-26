@@ -14,7 +14,7 @@
         display: flex;
         max-width: 800px;
         margin: 40px auto;
-        border-radius: 10px
+        box-shadow: $color-grey 1px 1px 20px 8px;
     }
     &__content {
         width: 100%;
@@ -60,7 +60,7 @@
         top: 8px;
         right: 14px;
         font-size: 30px;
-        color: #000;
+        color: $color-grey;
         opacity: .5;
         font-weight: 700;
         border: none;

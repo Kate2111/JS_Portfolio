@@ -16519,7 +16519,7 @@ function modal(triggerSelector, modalSelector) {
   const modalTrigger = document.querySelectorAll(triggerSelector);
   modalTrigger.forEach((btn, index) => {
     btn.addEventListener('click', () => {
-      const altText = btn.getAttribute('alt');
+      const altText = btn.getAttribute('data-nameAlt');
       const elemInfo = portfolio.find(item => item.alt === altText);
       if (altText === elemInfo.alt) {
         openModal(modalSelector, elemInfo);

@@ -54,6 +54,7 @@ body {
   font-family: "Poppins", sans-serif;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 .container {
@@ -229,11 +230,12 @@ body {
 .sidepanel__divider {
   width: 2px;
   height: 70px;
-  background-color: #000;
+  background-color: #919191;
 }
 .sidepanel__text {
   width: 25px;
   height: 150px;
+  color: #919191;
 }
 .sidepanel__text span {
   transform: rotate(-90deg) translate(-30%, -350%);
@@ -639,9 +641,8 @@ body {
 .portfolio__item {
   position: relative;
   transition: all 0.6s;
-  cursor: pointer;
 }
-.portfolio__item:hover::before {
+.portfolio__item::before {
   content: "";
   position: absolute;
   top: 0;
@@ -651,12 +652,18 @@ body {
   background-color: rgba(17, 16, 16, 0.604);
   z-index: 1;
   pointer-events: none;
+  opacity: 0;
+  transition: opacity 1s;
+}
+.portfolio__item:hover::before {
+  opacity: 1;
 }
 .portfolio__item:hover .portfolio__item-image {
   filter: brightness(110%) blur(2px);
 }
 .portfolio__item:hover .portfolio__item-info {
   opacity: 1;
+  transition: opacity 1s;
 }
 .portfolio__item-image {
   width: 100%;
@@ -672,6 +679,7 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  transition: opacity 0.5s;
 }
 .portfolio__item-info p {
   margin: 7px;
@@ -798,34 +806,26 @@ body {
   margin-right: 10px;
 }
 .contacts__input {
-  position: relative;
-}
-.contacts__input input {
-  width: 235px;
+  width: 100%;
   height: 100%;
   padding: 0 20px;
   font-size: 12px;
   font-weight: 500;
+  color: #ffffff;
+  border-radius: 10px;
+  border: 1px solid #919191;
+  background: transparent;
 }
 .contacts__textarea {
-  position: relative;
   grid-column: 1/3;
-}
-.contacts__textarea textarea {
-  width: 96%;
+  width: 100%;
   height: 100%;
   resize: none;
-  padding: 10px;
-}
-.contacts label {
-  display: block;
-  position: absolute;
-  height: 18px;
-  padding: 0 8px;
-  background-color: #fff;
-  font-size: 12px;
-  left: 12px;
-  top: -9px;
+  padding: 20px;
+  color: #ffffff;
+  border-radius: 10px;
+  border: 1px solid #919191;
+  background: transparent;
 }
 .contacts__btn {
   border: none;
@@ -851,7 +851,7 @@ body {
   display: flex;
   max-width: 800px;
   margin: 40px auto;
-  border-radius: 10px;
+  box-shadow: #5f5e5e 1px 1px 20px 8px;
 }
 .modal__content {
   width: 100%;
@@ -897,7 +897,7 @@ body {
   top: 8px;
   right: 14px;
   font-size: 30px;
-  color: #000;
+  color: #5f5e5e;
   opacity: 0.5;
   font-weight: 700;
   border: none;

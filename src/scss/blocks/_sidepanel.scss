@@ -11,11 +11,12 @@
     &__divider {
         width: 2px;
         height: 70px;
-        background-color: #000;
+        background-color: $color-light-grey;
     }
     &__text {
         width: 25px;
         height: 150px;
+        color: $color-light-grey;
         span {
             transform: rotate(-90deg) translate(-30%,-350%);
             display: block;

@@ -48,7 +48,7 @@ function modal(triggerSelector, modalSelector) {
 
     modalTrigger.forEach((btn, index) => { 
         btn.addEventListener('click', () => {
-            const altText = btn.getAttribute('alt');
+            const altText = btn.getAttribute('data-nameAlt');
             const elemInfo = portfolio.find(item => item.alt === altText);
 
             if(altText === elemInfo.alt) {
