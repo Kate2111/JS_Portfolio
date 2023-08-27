@@ -1,7 +1,7 @@
 .promo {
     height: 500px;
     position: relative;
-    //background-color: #BFDAED;
+    box-sizing: content-box;
     padding-top: 205px;
     &__title {
         width: 535px;
@@ -23,7 +23,6 @@
         width: 380px;
     }
     &__link {
-        //color: #000;
         text-decoration: none;
         font-weight: 700;
     }
