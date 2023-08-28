@@ -16382,7 +16382,7 @@ __webpack_require__.r(__webpack_exports__);
 function forms(formSelector) {
   const forms = document.querySelectorAll(formSelector);
   const message = {
-    success: 'Спасибо! Ваше сообщение получено',
+    success: 'Спасибо! Я обязательно с Вами свяжусь:)',
     failure: 'Что-то пошло не так...'
   };
   forms.forEach(item => {
@@ -16394,35 +16394,39 @@ function forms(formSelector) {
       const formData = new FormData(form);
       const formDataForAuth = Object.fromEntries(formData.entries());
       const json = JSON.stringify(formDataForAuth);
-      console.log('postData');
       (0,_modules_services__WEBPACK_IMPORTED_MODULE_1__.postData)(json).then(() => {
-        showThanksModal(message.success, '.modal__dialog', '.modal', 'modal__dialog');
+        showThanksModal(message.success);
       }).catch(() => {
-        showThanksModal(message.failure, '.modal__dialog', '.modal', 'modal__dialog');
+        showThanksModal(message.failure);
       }).finally(() => {
         form.reset();
       });
     });
   }
-  function showThanksModal(message, dialogFormSelector, formMainClass, dialogForm) {
-    const prevModalDialog = document.querySelector(dialogFormSelector);
-    prevModalDialog.classList.add('hide');
-    (0,_modal__WEBPACK_IMPORTED_MODULE_0__.openModal)(formMainClass);
+  function showThanksModal(message) {
+    const parent = document.querySelector('.contacts');
     const thanksModal = document.createElement('div');
-    thanksModal.classList.add(dialogForm);
+    thanksModal.classList.add('modal');
     thanksModal.innerHTML = `
-            <div class="modal__content">                  
-                <div data-close class="modal__close">&times;</div>
-                <div class="modal__title">${message}</div>
-            </div>
+            <div class="modal__dialog">
+                <div class="modal__content">                  
+                    <div data-close class="modal__close">&times;</div>
+                    <div class="modal__title">${message}</div>
+                </div>
+            </div>  
         `;
-    document.querySelector(formMainClass).append(thanksModal);
+    thanksModal.classList.add('show');
+    parent.insertAdjacentElement('afterbegin', thanksModal);
+    thanksModal.addEventListener('click', e => {
+      if (e.target.getAttribute('data-close') == '') {
+        thanksModal.classList.add('hide');
+        thanksModal.remove();
+      }
+    });
     setTimeout(() => {
+      thanksModal.classList.add('hide');
       thanksModal.remove();
-      prevModalDialog.classList.add('show');
-      prevModalDialog.classList.remove('hide');
-      (0,_modal__WEBPACK_IMPORTED_MODULE_0__.closeModal)(formMainClass);
-    }, 4000);
+    }, 1500);
   }
 }
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (forms);
@@ -16632,6 +16636,35 @@ function postData(data) {
 }
 
 
+
+/***/ }),
+
+/***/ "./src/js/modules/skills.js":
+/*!**********************************!*\
+  !*** ./src/js/modules/skills.js ***!
+  \**********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+function skillsHandler() {
+  new WOW().init();
+  const skills = document.querySelectorAll('.skills__item');
+  skills.forEach(item => {
+    item.addEventListener('mouseover', () => {
+      item.classList.remove('wow', 'fadeIn');
+      item.removeAttribute('style');
+      item.classList.add('animate__animated', 'animate__heartBeat');
+    });
+    item.addEventListener('mouseout', () => {
+      item.classList.remove('animate__animated', 'animate__heartBeat');
+    });
+  });
+}
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (skillsHandler);
 
 /***/ }),
 
@@ -20073,38 +20106,26 @@ var __webpack_exports__ = {};
   !*** ./src/js/script.js ***!
   \**************************/
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _modules_modal__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/modal */ "./src/js/modules/modal.js");
+/* harmony import */ var _modules_canvas__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/canvas */ "./src/js/modules/canvas.js");
 /* harmony import */ var _modules_tab__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/tab */ "./src/js/modules/tab.js");
-/* harmony import */ var _modules_canvas__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/canvas */ "./src/js/modules/canvas.js");
-/* harmony import */ var _modules_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/forms */ "./src/js/modules/forms.js");
+/* harmony import */ var _modules_modal__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/modal */ "./src/js/modules/modal.js");
+/* harmony import */ var _modules_skills__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/skills */ "./src/js/modules/skills.js");
+/* harmony import */ var _modules_forms__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/forms */ "./src/js/modules/forms.js");
 (__webpack_require__(/*! es6-promise */ "./node_modules/es6-promise/dist/es6-promise.js").polyfill)();
 
 
 
 
+
 window.addEventListener('DOMContentLoaded', function () {
-  (0,_modules_canvas__WEBPACK_IMPORTED_MODULE_2__["default"])();
-  skillsHandler();
+  (0,_modules_canvas__WEBPACK_IMPORTED_MODULE_0__["default"])();
+  (0,_modules_skills__WEBPACK_IMPORTED_MODULE_3__["default"])();
   (0,_modules_tab__WEBPACK_IMPORTED_MODULE_1__["default"])('.portfolio__tab', '.portfolio__items', 'my_button--active', 'portfolio__items--active');
-  (0,_modules_modal__WEBPACK_IMPORTED_MODULE_0__["default"])('[data-all]', '.modal');
-  (0,_modules_modal__WEBPACK_IMPORTED_MODULE_0__["default"])('[data-react]', '.modal');
-  (0,_modules_modal__WEBPACK_IMPORTED_MODULE_0__["default"])('[data-js]', '.modal');
-  (0,_modules_modal__WEBPACK_IMPORTED_MODULE_0__["default"])('[data-vue]', '.modal');
-  (0,_modules_forms__WEBPACK_IMPORTED_MODULE_3__["default"])('form');
-  function skillsHandler() {
-    new WOW().init();
-    const skills = document.querySelectorAll('.skills__item');
-    skills.forEach(item => {
-      item.addEventListener('mouseover', () => {
-        item.classList.remove('wow', 'fadeIn');
-        item.removeAttribute('style');
-        item.classList.add('animate__animated', 'animate__heartBeat');
-      });
-      item.addEventListener('mouseout', () => {
-        item.classList.remove('animate__animated', 'animate__heartBeat');
-      });
-    });
-  }
+  (0,_modules_modal__WEBPACK_IMPORTED_MODULE_2__["default"])('[data-all]', '.modal');
+  (0,_modules_modal__WEBPACK_IMPORTED_MODULE_2__["default"])('[data-react]', '.modal');
+  (0,_modules_modal__WEBPACK_IMPORTED_MODULE_2__["default"])('[data-js]', '.modal');
+  (0,_modules_modal__WEBPACK_IMPORTED_MODULE_2__["default"])('[data-vue]', '.modal');
+  (0,_modules_forms__WEBPACK_IMPORTED_MODULE_4__["default"])('form');
 });
 })();
 
