@@ -6,7 +6,7 @@ function forms(formSelector) {
     const forms = document.querySelectorAll(formSelector);
 
     const message = {
-        success: 'Спасибо! Ваше сообщение получено',
+        success: 'Спасибо! Я обязательно с Вами свяжусь:)',
         failure: 'Что-то пошло не так...',
     };
 
@@ -23,13 +23,11 @@ function forms(formSelector) {
             const formDataForAuth = Object.fromEntries(formData.entries());
             const json = JSON.stringify(formDataForAuth);
 
-            
-            console.log('postData')
             postData(json)
             .then(() => {
-                showThanksModal(message.success, '.modal__dialog', '.modal', 'modal__dialog');
+                showThanksModal(message.success);
             }).catch(() => {
-                showThanksModal(message.failure, '.modal__dialog', '.modal', 'modal__dialog');
+                showThanksModal(message.failure);
             }).finally(() => {
                 form.reset();
             });
@@ -38,28 +36,34 @@ function forms(formSelector) {
     }
     
     
-    function showThanksModal(message, dialogFormSelector, formMainClass, dialogForm) {
-        const prevModalDialog = document.querySelector(dialogFormSelector);
-
-        prevModalDialog.classList.add('hide');
-        openModal(formMainClass);
-
+    function showThanksModal(message) {
+        const parent = document.querySelector('.contacts');
         const thanksModal = document.createElement('div');
-        thanksModal.classList.add(dialogForm);
+        thanksModal.classList.add('modal');
         thanksModal.innerHTML = `
-            <div class="modal__content">                  
-                <div data-close class="modal__close">&times;</div>
-                <div class="modal__title">${message}</div>
-            </div>
+            <div class="modal__dialog">
+                <div class="modal__content">                  
+                    <div data-close class="modal__close">&times;</div>
+                    <div class="modal__title">${message}</div>
+                </div>
+            </div>  
         `;
 
-        document.querySelector(formMainClass).append(thanksModal);
+        thanksModal.classList.add('show');
+
+        parent.insertAdjacentElement('afterbegin', thanksModal)
+
+        thanksModal.addEventListener('click', (e) => {
+            if (e.target.getAttribute('data-close') == '') {
+                thanksModal.classList.add('hide');
+                thanksModal.remove();
+            }
+        });
+
         setTimeout(() => {
+            thanksModal.classList.add('hide');
             thanksModal.remove();
-            prevModalDialog.classList.add('show');
-            prevModalDialog.classList.remove('hide');
-            closeModal(formMainClass);
-        }, 4000);
+        }, 1500);
     }
 }
 
