@@ -246,11 +246,20 @@
 
 @media (max-width: 576px) {
     .container {
-        max-width: 100%;
+        max-width: 95%;
         padding: 0 8px;
     }
-    .promo__btn {
+    .promo{
+        &__btn {
         margin-top: 30px;
+        }
+        &__buttons{
+            align-items: flex-start;
+            justify-content: space-between;
+            width: 250px;
+            gap: 11px;
+            flex-direction: column;
+        }
     }
     .title {
         &_fz36 {
@@ -324,6 +333,25 @@
             padding: 0 3px;
             grid-template-columns: 314px;
             justify-content: start;
+        }
+    }
+    .modal{
+        &__dialog{
+            max-width: 300px;
+            flex-direction: column;
+        }
+        &__content {
+            width: 100%;
+            padding: 12px;
+        }
+        &__title {
+            font-size: 18px;
+        }
+        &__close {
+            right: 21px;
+        }
+        p, div {
+            font-size: 13px;
         }
     }
 }
