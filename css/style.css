@@ -923,11 +923,18 @@ html {
 }
 @media (max-width: 576px) {
   .container {
-    max-width: 100%;
+    max-width: 95%;
     padding: 0 8px;
   }
   .promo__btn {
     margin-top: 30px;
+  }
+  .promo__buttons {
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 250px;
+    gap: 11px;
+    flex-direction: column;
   }
   .title_fz36 {
     font-size: 24px;
@@ -997,5 +1004,22 @@ html {
     padding: 0 3px;
     grid-template-columns: 314px;
     justify-content: start;
+  }
+  .modal__dialog {
+    max-width: 300px;
+    flex-direction: column;
+  }
+  .modal__content {
+    width: 100%;
+    padding: 12px;
+  }
+  .modal__title {
+    font-size: 18px;
+  }
+  .modal__close {
+    right: 21px;
+  }
+  .modal p, .modal div {
+    font-size: 13px;
   }
 }
