@@ -16454,7 +16454,7 @@ const portfolio = [{
   stack: 'React, Create React App, React Router, CSS Modules, Firebase (Database, Store,Authentication), React Hooks',
   descr: 'Многостраничный интернет-магазин мебели. Авторизованный пользователь имеет возможность добавлять товар в избранное и корзину. Реализован 3D эффект на главном экране, автоматическая карусель новой коллекции.',
   title: 'Магазин дизайнерской мебели',
-  src: '../../img/portfolio/furniture.jpg',
+  src: 'img/portfolio/furniture.jpg',
   alt: 'furniture'
 }, {
   project: 'https://kate2111.github.io/JS_RunSmart/',
@@ -16462,7 +16462,7 @@ const portfolio = [{
   stack: 'JavaScript, Firebase Database, Gulp + Webpack, Slick slider, Методология БЭМ',
   descr: 'Страница сверстана в стили Langing Page. Реализованы модальные окна для заказа консультации, анимация, карусель просмотра фото, настроена форма обратной связи(заявки приходят на почту администратора)',
   title: 'Магазин спорттоваров',
-  src: '../../img/portfolio/pulse.jpg',
+  src: 'img/portfolio/pulse.jpg',
   alt: 'pulse'
 }, {
   project: 'https://kate2111.github.io/JS_Food/',
@@ -16470,7 +16470,7 @@ const portfolio = [{
   stack: 'JavaScript, Firebase Database, Gulp + Webpack, Методология БЭМ',
   descr: 'Страница сверстана в стили Langing Page. Реализованы модальные окна для связи с магазином, расчет суточной нормы калорий для пользователя, обратный таймер отсчета до завершения акции. Регистрация и авторизация пользователя.',
   title: 'Магазин продуктов правильного питания',
-  src: '../../img/portfolio/food.jpg',
+  src: 'img/portfolio/food.jpg',
   alt: 'food'
 }, {
   project: 'https://kate2111.github.io/React_book/',
@@ -16478,7 +16478,7 @@ const portfolio = [{
   stack: 'React, Google Book APIs, Сборка Vite, Библиотека Axios, React Router, CSS Modules, React Hooks',
   descr: 'С помощью данного приложения можно ознакомится с книгами из библиотеки, добавить новую или удалить из списка существующую. Реализован фильтр книг по названию/описанию и поиск книг по библиотеке',
   title: 'Библиотека',
-  src: '../../img/portfolio/book.webp',
+  src: 'img/portfolio/book.webp',
   alt: 'book'
 }, {
   project: 'https://kate2111.github.io/Vue_food/',
@@ -16486,7 +16486,7 @@ const portfolio = [{
   stack: 'Vue, API www.themealdb, Библиотеки Axios, Vuex, Сборка Vite, Маршрутизатор Vue-router',
   descr: 'Сборник рецептов с подробным описанием, ссылкой  на видео рецепт на YouTube. Реализованы три вида поиска: по названию рецепта, по ингридиету и алфавиту',
   title: 'Книга рецептов',
-  src: '../../img/portfolio/meals.webp',
+  src: 'img/portfolio/meals.webp',
   alt: 'meals'
 }, {
   project: 'https://kate2111.github.io/Vue_food/',
@@ -16494,7 +16494,7 @@ const portfolio = [{
   stack: 'Vue, API www.themealdb, Библиотеки Axios, Vuex, Сборка Vite, Маршрутизатор Vue-router',
   descr: 'Сборник рецептов с подробным описанием, ссылкой  на видео рецепт на YouTube. Реализованы три вида поиска: по названию рецепта, по ингридиету и алфавиту',
   title: 'Книга рецептов',
-  src: '../../img/portfolio/meals.webp',
+  src: 'img/portfolio/meals.webp',
   alt: 'meals'
 }];
 function closeModal(modal) {
