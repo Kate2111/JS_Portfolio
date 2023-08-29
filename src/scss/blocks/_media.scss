@@ -44,7 +44,7 @@
         }
     }
     .portfolio {
-        &__wrapper {
+        &__items {
             grid-template-columns: repeat(auto-fit, 280px);
             grid-auto-rows: 280px;
             justify-content: space-around;
@@ -109,12 +109,6 @@
     .portfolio {
         padding-top: 90px;
     }
-    .price {
-        &__items {
-            grid-template-columns: repeat(auto-fit, 350px);
-            padding: 65px 0 0 0;
-        }
-    }
     .contacts {
         padding: 60px 0;
         &__wrapper {
@@ -139,7 +133,7 @@
             height: 75%;
             }
         }
-        .btn {
+        &__btn {
             padding: 7px 25px;
         }
     }
@@ -198,14 +192,8 @@
     }
     .portfolio {
         padding-top: 70px;
-        &__wrapper {
-            row-gap: 20px;
-        }
-    }
-    .price {
         &__items {
-            padding-top: 70px;
-            justify-content: center;
+            row-gap: 20px;
         }
     }
     .contacts {
@@ -261,31 +249,17 @@
         max-width: 100%;
         padding: 0 8px;
     }
-    .title {
-        &_fz48 {
-            font-size: 26px;
-        }
-    }
-    .hamburger {
-        right: 20px;
-    }
-    .promo {
-        background: url('../img/Background.jpg') no-repeat 60%/cover;
-        &__btn {
-            margin-top: 30px;
-        }
-    }
-    .menu {
-        &__block {
-            width: 250px;
-            padding-left: 20px;
-        }
+    .promo__btn {
+        margin-top: 30px;
     }
     .title {
         &_fz36 {
             font-size: 24px;
             line-height: 36px;
             margin-top: 26px;
+        }
+        &_fz48 {
+            font-size: 26px;
         }
         &__section-subtitle {
             margin-top: 20px;
@@ -333,14 +307,15 @@
     }
     .portfolio {
         padding-top: 40px;
-        &__wrapper {
+        &__items {
             margin-top: 55px;
         }
-    }
-    .price {
-        &__items {
-            grid-template-columns: repeat(auto-fit, 290px);
-            justify-content: start;
+        &__tabs {
+            max-width: 215px;
+            margin: 30px auto;
+            gap: 12px;
+            justify-content: center;
+            flex-wrap: wrap;
         }
     }
     .contacts {
