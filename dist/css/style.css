@@ -531,8 +531,21 @@ html {
   grid-template-columns: 400px 580px;
   justify-content: space-between;
 }
-.contacts__photo img {
+.contacts__photo {
+  position: relative;
+}
+.contacts__photo .last {
+  position: absolute;
+  width: 110%;
+  top: -30px;
+  left: -20px;
+  filter: saturate(3) blur(20px);
+  opacity: 0.3;
+}
+.contacts__photo .first {
   width: 100%;
+  position: absolute;
+  top: 0;
 }
 .contacts__descr {
   padding-top: 6px;

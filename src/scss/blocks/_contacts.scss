@@ -7,9 +7,22 @@
         justify-content: space-between;
     }
     &__photo {
-        img {
-            width: 100%;
+        position: relative;
+        .last{
+            position: absolute;
+            width: 110%;
+            top: -30px;
+            left: -20px;
+            filter: saturate(3) blur(20px);
+            opacity: 0.3;
+            
         }
+        .first {
+            width: 100%;
+            position: absolute;
+            top: 0;
+        }
+      
     }
     &__descr {
         padding-top: 6px;
