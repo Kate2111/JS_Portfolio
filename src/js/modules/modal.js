@@ -11,7 +11,7 @@ const portfolio = [
 
     {project: 'https://kate2111.github.io/Vue_food/', github: 'https://github.com/Kate2111/Vue_food', stack: 'Vue, API www.themealdb, Библиотеки Axios, Vuex, Сборка Vite, Маршрутизатор Vue-router', descr: 'Сборник рецептов с подробным описанием, ссылкой  на видео рецепт на YouTube. Реализованы три вида поиска: по названию рецепта, по ингридиету и алфавиту', title: 'Книга рецептов', src: 'img/portfolio/meals.webp', alt: 'meals'},  
     
-    {project: 'https://kate2111.github.io/Vue_food/', github: 'https://github.com/Kate2111/Vue_food', stack: 'Vue, API www.themealdb, Библиотеки Axios, Vuex, Сборка Vite, Маршрутизатор Vue-router', descr: 'Сборник рецептов с подробным описанием, ссылкой  на видео рецепт на YouTube. Реализованы три вида поиска: по названию рецепта, по ингридиету и алфавиту', title: 'Книга рецептов', src: 'img/portfolio/meals.webp', alt: 'meals'}, 
+    {project: 'https://kate2111.github.io/React_pizza/', github: 'https://github.com/Kate2111/React_pizza', stack: 'ReactJS 18, TypeScript, Redux Toolkit, React Router, React Hooks, CSS-Modules, React Content Loader, React Pagination, Lodash.Debounce, Code Splitting, React Loadable, useWhyDidYouUpdate', descr: 'Много страничный сайт, реализован фильтр по категориям и сортировка для более быстрого подбора продукта.', title: 'Заказать пиццу онлайн', src: 'img/portfolio/pizza.jpg', alt: 'pizza'}, 
 ]
 
 
