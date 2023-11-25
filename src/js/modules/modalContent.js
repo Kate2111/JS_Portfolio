@@ -1,10 +1,9 @@
-
 function addModalContent(elem) {
-    const parent = document.querySelector('.portfolio');
-    const element = document.createElement('div');
-    element.classList.add('modal');
+  const parent = document.querySelector('.portfolio');
+  const element = document.createElement('div');
+  element.classList.add('modal');
 
-    element.innerHTML = `
+  element.innerHTML = `
         <div class="modal__dialog">
             <div class="modal__content">
                 <img class="modal__image" src=${elem.src} alt=${elem.alt}>
@@ -22,7 +21,7 @@ function addModalContent(elem) {
         </div>
     `;
 
-    parent.insertAdjacentElement('afterbegin', element);
+  parent.insertAdjacentElement('afterbegin', element);
 }
 
 export default addModalContent;

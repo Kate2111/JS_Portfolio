@@ -16475,7 +16475,7 @@ const portfolio = [{
 }, {
   project: 'https://kate2111.github.io/React_book/',
   github: 'https://github.com/Kate2111/React_book',
-  stack: 'React, Google Book APIs, Сборка Vite, Библиотека Axios, React Router, CSS Modules, React Hooks',
+  stack: 'React, Google Book APIs, Vite, Библиотека Axios, React Router, CSS Modules, React Hooks',
   descr: 'С помощью данного приложения можно ознакомится с книгами из библиотеки, добавить новую или удалить из списка существующую. Реализован фильтр книг по названию/описанию и поиск книг по библиотеке',
   title: 'Библиотека',
   src: 'img/portfolio/book.webp',
@@ -16492,10 +16492,26 @@ const portfolio = [{
   project: 'https://kate2111.github.io/React_pizza/',
   github: 'https://github.com/Kate2111/React_pizza',
   stack: 'ReactJS 18, TypeScript, Redux Toolkit, React Router, React Hooks, CSS-Modules, React Content Loader, React Pagination, Lodash.Debounce, Code Splitting, React Loadable, useWhyDidYouUpdate',
-  descr: 'Много страничный сайт, реализован фильтр по категориям и сортировка для более быстрого подбора продукта.',
+  descr: 'Многостраничный сайт, реализован фильтр по категориям и сортировка для более быстрого подбора продукта.',
   title: 'Заказать пиццу онлайн',
   src: 'img/portfolio/pizza.jpg',
   alt: 'pizza'
+}, {
+  project: 'https://kate2111.github.io/React_event-log/',
+  github: 'https://github.com/Kate2111/React_event-log',
+  stack: 'ReactJS 18, TypeScript, Redux Toolkit, React Router, React Hooks, UI PrimeReact, Vite',
+  descr: 'Web-приложение Журнал событий позволяет просматривать списки событий в виде карточек или в виде таблицы, реализован поиск по тексту сообщения, возможность добавить новую запись, возможность отметить событие прочитанным',
+  title: 'Журнал событий',
+  src: 'img/portfolio/event.jpg',
+  alt: 'event'
+}, {
+  project: 'https://kate2111.github.io/React_cityGame/',
+  github: 'https://github.com/Kate2111/React_cityGame',
+  stack: 'ReactJS 18, TypeScript, Redux Toolkit, React Router, React Hooks, TailwindCss, Vite',
+  descr: 'Игра в города с участием компьютерного оппонента с ограничением времени для ответа. В случае, если игрок или компьютер не успевают ответить за 2 минуты, происходит проигрыш. По завершении игры предоставляется статистика, включая количество названных городов игроками и последний названный город победителем.',
+  title: 'Игра в города',
+  src: 'img/portfolio/game.jpg',
+  alt: 'game'
 }];
 function closeModal(modal) {
   modal.classList.add('hide');
